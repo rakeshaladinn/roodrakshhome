@@ -17,15 +17,32 @@ const bannerData = [
     description:
       "Bringing together a team with passion, dedication, and resources to help our clients reach their buying and selling goals. We are with you every step of the way.",
   },
+  {
+    id: 1,
+    src: Appassets.Hero2,
+    title: "top nouch",
+    subtitle: "Living space",
+    description:
+      "Bringing together a team with passion, dedication, and resources to help our clients reach their buying and selling goals. We are with you every step of the way.",
+  },
+  {
+    id: 1,
+    src: Appassets.Hero3,
+    title: "Discover Your ",
+    subtitle: "Flexiable Living House",
+    description:
+      "Bringing together a team with passion, dedication, and resources to help our clients reach their buying and selling goals. We are with you every step of the way.",
+  },
 ];
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 mt-22 rounded-b-2xl overflow-hidden">
+    <div className="relative mx-3 mt-22 rounded-b-2xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
         autoplay={true}
+        // navigation
       >
         {bannerData.map((item) => (
           <div
@@ -50,7 +67,7 @@ const MainBanner = () => {
                   {item.title} <br />
                   {item.subtitle}
                 </h1>
-                <p className="mt-4 max-w-xl text-base sm:text-lg md:text-xl font-medium text-white/90">
+                <p className="mt-4 max-w-xl text-base sm:text-lg md:text-xl text-white/90">
                   {item.description}
                 </p>
 

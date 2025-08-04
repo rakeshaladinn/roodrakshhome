@@ -142,7 +142,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className=" flex items-center justify-end  gap-5 h-full w-full md:w-[42%] lg:w-[18%] ">
+        <div className=" flex items-center justify-end  gap-8 h-full w-full md:w-[42%] lg:w-[18%] ">
           <Button
             text="Add Listing"
             icon={<FaArrowRightLong />}
@@ -152,8 +152,8 @@ const Header = () => {
             className="flex hover:text-primary transition-all duration-500 items-center justify-end gap-2 cursor-pointer "
             onClick={() => setIsOpen(true)}
           >
-            <span className="  font-medium   line-clamp-1 ">
-              <CiMenuFries className="text-2xl " />
+            <span className="  font-semibold">
+              <CiMenuFries className="text-2xl font-semibold " />
             </span>
           </button>
         </div>
