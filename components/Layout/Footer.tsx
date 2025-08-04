@@ -1,94 +1,163 @@
 "use client";
-import Image from "next/image";
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
-import { navItems } from "./Sidebar";
-import { Appassets } from "../../constants/Appassets";
 
-const Footer = () => {
-  // const staticpages = [
-  //   { id: 1, title: "Privacy Policy", link: "/" },
-  //   { id: 1, title: "Terms and Condition", link: "/" },
-  // ];
+import { Appassets } from "@/constants/Appassets";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaVimeoV,
+  FaPinterestP,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { navItems } from "./Sidebar";
+import { FaInstagram } from "react-icons/fa6";
+
+export default function Footer() {
+  const servicesLinks = [
+    { label: "Strategy Services", href: "#" },
+    { label: "Business Advice", href: "#" },
+    { label: "Management", href: "#" },
+    { label: "Financial Advice", href: "#" },
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className=" relative bg-[url('/banners/footer.png')] text-white pt-16 px-4 ">
-      <div className="max-w-6xl mx-auto ">
-        <div className="text-center mb-10">
-          {/* Logo */}
-          <div className="flex items-center justify-center mb-6">
-            <div className="relative">
-              <div className="flex items-center justify-center py-7">
-                <Image
-                  alt="Logo image"
-                  src={Appassets.Logo}
-                  width={1920}
-                  height={1080}
-                  priority
-                  className="w-full object-contain h-24"
-                />
-              </div>
+    <footer className="relative bg-[url('/banners/footer.png')] text-white pt-16 bg-cover bg-center bg-no-repeat">
+      <div className="px-4 sm:px-6 lg:px-8">
+        {/* Top section */}
+        <div className="flex flex-col lg:flex-row justify-between gap-12 pb-12">
+          {/* Logo and newsletter */}
+          <div className="w-full lg:w-1/3 flex flex-col items-start md:items-center lg:items-start text-center lg:text-left">
+            <Image
+              alt="Roodraksh group"
+              src={Appassets.Logo}
+              width={200}
+              height={100}
+              priority
+              className="w-auto h-24 object-contain mb-6"
+            />
+            <p className="text-base  text-white text-start md:text-center lg:text-start tracking-wide max-w-xs mb-6">
+              Discover why our residents love calling us home from breathtaking
+              views and luxury finishes to unmatched service and community
+              living, their stories reflect
+            </p>
+            <form className="flex w-full max-w-md bg-white rounded-full p-2">
+              <input
+                type="email"
+                placeholder="Email address"
+                className="flex-1 text-lg rounded-l-full border-none focus:outline-none bg-white text-gray-800 placeholder:text-gray-800 px-4 py-2"
+              />
+              <button
+                type="submit"
+                className="bg-primary text-white text-base md:text-lg rounded-full px-6 py-2 transition-colors"
+              >
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+
+          {/* Navigation + Contacts + Services */}
+          <div className="w-full justify-center lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Useful Links */}
+            <div className="flex flex-col items-start  w-full ">
+              <h3 className="text-lg font-semibold text-center   mb-4">
+                Useful Link
+              </h3>
+              <ul className="space-y-2 text-start text-white">
+                {navItems.map((item: any, index: number) => (
+                  <li key={index}>
+                    <Link
+                      href={item.url}
+                      className="text-white text-start hover:text-primary transition-colors text-base"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div className="flex flex-col items-star tw-full">
+              <h3 className="text-lg font-semibold  text-start  mb-4">
+                Our Services
+              </h3>
+              <ul className="space-y-2 text-white">
+                {servicesLinks.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="text-white hover:text-primary transition-colors text-base md:text-lg"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Contact Info */}
+            <div className="flex flex-col items-start text-center md:text-left w-full ">
+              <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+              <ul className="space-y-3 text-white">
+                <li className="flex items-start gap-2">
+                  <div>
+                    <FaMapMarkerAlt className="w-4 h-4 text-white mt-1" />
+                  </div>
+                  <span className="text-base text-start">
+                    Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
+                    Guwahati - 781003
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div>
+                    <FaEnvelope className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-base md">info@roodraksh.co.in</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div>
+                    <FaPhoneAlt className="w-4 h-4 text-white" />
+                  </div>
+
+                  <span className="text-base md:text-lg">(094) 542 - 4780</span>
+                </li>
+              </ul>
             </div>
           </div>
-          <p className="text-gray-100  text-sm max-w-3xl mx-auto ">
-            From vibrant living spaces to thoughtfully developed commercial
-            areas, Roodraksh Group caters to evolving urban needs with a focus
-            on long-term value and sustainability.
-          </p>
         </div>
 
-        {/* Navigation Links */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-14 mb-2 border-t-1 border-b-1 border-gray-700 py-4 ">
-          {navItems?.map((item: any, index: number) => (
-            <a
-              href={item.url}
-              key={index}
-              className="text-gray-300 text-sm hover:text-primary transition-colors font-medium uppercase "
-            >
-              {item?.label}
-            </a>
-          ))}
-        </div>
-        <div className="flex justify-center py-2 items-center">
-          <div className="flex flex-row justify-center items-center gap-4 mb-2">
+        {/* Bottom Bar */}
+        <div className="border-t border-footer-border pt-6 pb-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-base md:text-lg text-center sm:text-left">
+            © 2025 <span className="text-primary">Roodraksh&nbsp;</span> All
+            Rights Reserved
+          </p>
+          <div className="flex justify-center items-center gap-4">
             <a
               href="https://www.facebook.com/roodrakshgroup/"
               target="__blank"
-              className="bg-primary hover:scale-110 ease-in-out transition-all duration-700 p-2 rounded"
+              className=" bg-gray-700 hover:bg-primary hover:scale-110 transition-all duration-500 p-2 rounded-full"
               aria-label="Facebook"
             >
-              <FaFacebook className="w-4 h-4" />
+              <FaFacebook className="w-6 h-6" />
             </a>
             <a
               href="https://www.instagram.com/roodraksh_builders/"
               target="__blank"
-              className="bg-primary hover:scale-110 ease-in-out transition-all duration-700 p-2 rounded"
+              className="bg-gray-700 hover:bg-primary hover:scale-110 transition-all duration-500 p-2 rounded-full"
               aria-label="Instagram"
             >
-              <FaInstagram className="w-4 h-4" />
+              <FaInstagram className="w-6 h-6" />
             </a>
           </div>
-        </div>
-
-        <div className="flex flex-col sm:flex-row justify-center items-center py-8 border-t border-slate-700">
-          <p className="text-gray-400 text-sm mb-4 sm:mb-0">
-            © 2025 <span className="text-primary">Roodraksh&nbsp;</span>
-            All Rights Reserved
-          </p>
-          {/* <div className="flex flex-wrap justify-center gap-8 border-gray-700">
-            {staticpages.map((item: any, index: number) => (
-              <a
-                href={item?.link}
-                target="__blank"
-                key={index}
-                className="text-gray-300 text-sm hover:text-primary transition-colors font-medium uppercase "
-              >
-                {item?.title}
-              </a>
-            ))}
-          </div> */}
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

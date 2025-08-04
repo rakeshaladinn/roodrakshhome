@@ -7,6 +7,9 @@ import { PiPhoneDisconnectLight } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Sidebar, { navItems } from "./Sidebar";
 import { Appassets } from "../../constants/Appassets";
+import { CiMenuFries } from "react-icons/ci";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Button from "../Controls/Button";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,20 +45,22 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`  bg-black left-1/2 max-w-[2100px]  transform   duration-300 ease-in-out transition -translate-x-1/2  lg:flex ${
-        isScrolled ? " shadow-lg  text-black" : "backdrop-blur-xl text-white"
+      className={`  top-0 left-1/2 max-w-[2100px]  transform   duration-300 ease-in-out transition -translate-x-1/2  lg:flex ${
+        isScrolled
+          ? "bg-white shadow-lg  text-black"
+          : "backdrop-blur-xl text-black"
       }   w-full  fixed z-50 border-b border-white/10 px-4 xl:px-6 2xl:px-14`}
     >
-      <div className=" w-full   flex  items-center justify-between  ">
+      <div className=" w-full relative   flex  items-center justify-between  ">
         <Link
           href={"/"}
           className={`flex items-start justify-start  transform duration-700 transition ${
             isScrolled ? " py-2 md:py-3 " : " py-3  "
-          } w-full md:w-[16%] `}
+          } w-full md:w-[10%] `}
         >
           <Image
             alt="Logo image"
-            src={isScrolled ? Appassets.Logo : Appassets.Logo}
+            src={Appassets.BlackLogo}
             width={1920}
             height={1080}
             priority
@@ -64,7 +69,7 @@ const Header = () => {
             }`}
           />
         </Link>
-        <div className="hidden md:flex items-center justify-evenly gap-14    lg:w-[70%] mx-auto ">
+        <div className="hidden lg:flex items-center justify-evenly     lg:w-[65%] mx-auto ">
           {navItems.map((item, index) => (
             <div key={index} className="relative flex">
               <Link
@@ -137,23 +142,18 @@ const Header = () => {
           ))}
         </div>
 
-        <div className=" flex items-center justify-end  h-full w-full md:w-[42%] lg:w-[10%] ">
+        <div className=" flex items-center justify-end  gap-5 h-full w-full md:w-[42%] lg:w-[18%] ">
+          <Button
+            text="Add Listing"
+            icon={<FaArrowRightLong />}
+            className="bg-primary text-white px-4 py-2 rounded-2xl items-center flex clip-top-right"
+          />
           <button
-            className="flex hover:text-primary transition-all duration-500 items-center justify-end gap-2 w-full md:w-[35%] cursor-pointer "
+            className="flex hover:text-primary transition-all duration-500 items-center justify-end gap-2 cursor-pointer "
             onClick={() => setIsOpen(true)}
           >
-            <CgMenuLeftAlt
-              size={20}
-              className="md:hidden block"
-              fontWeight={500}
-            />{" "}
-            <PiPhoneDisconnectLight
-              className="md:block hidden "
-              size={20}
-              fontWeight={500}
-            />
-            <span className="text-sm lg:text-base  font-medium hidden md:block  line-clamp-1 ">
-              Connect Us
+            <span className="  font-medium   line-clamp-1 ">
+              <CiMenuFries className="text-2xl " />
             </span>
           </button>
         </div>

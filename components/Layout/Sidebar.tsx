@@ -1,4 +1,5 @@
 "use client";
+import { Appassets } from "@/constants/Appassets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -139,15 +140,12 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
     <div
       className={`fixed inset-0 z-40 overflow-y-hidden h-screen transition-transform duration-700 md:duration-[1.1s] ease-in-out bg-center bg-no-repeat md:bg-[url('/Banner01.png')] bg-cover ${
         isOpen
-          ? "translate-x-0 md:translate-y-0 md:translate-x-0"
-          : "-translate-x-full md:-translate-y-full md:translate-x-0"
+          ? "translate-x-0   opacity-full "
+          : "translate-x-full  opacity-0   "
       }`}
     >
-      {/* <div className="flex h-full w-full">
-        <div
-          className="w-[70%] md:w-[50%] bg-white relative text-white  md:bg-center md:bg-no-repeat md:bg-[url('/Banner02.png')] md:bg-cover"
-          ref={wrapperRef}
-        >
+      <div className="flex justify-end h-full w-full">
+        <div className="w-[70%] block md:hidden md:w-[50%] bg-white relative text-white  md:bg-center md:bg-no-repeat md:bg-[url('/Banner02.png')] md:bg-cover">
           <div className="relative z-10   flex-col h-full justify-between px-10 py-8">
             <div
               className="flex items-center gap-2 text-black md:text-white cursor-pointer hover:opacity-80 transition-opacity"
@@ -164,7 +162,10 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               <span className="text-lg font-medium">CLOSE</span>
             </div>
 
-            <nav className="flex flex-col md:hidden h-full justify-start mt-20 gap-6 text-lg tracking-wide">
+            <nav
+              ref={wrapperRef}
+              className="flex flex-col md:hidden h-full justify-start mt-20 gap-6 text-lg tracking-wide"
+            >
               {navItems.map((item: any) => {
                 const hasChildren = item.children?.length > 0;
 
@@ -198,71 +199,51 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                       </Link>
                     )}
 
-                    <AnimatePresence initial={false}>
-                      {hasChildren && activeMenu === item.label && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="ml-4 overflow-hidden mt-2 space-y-2"
-                        >
-                          {item.children.map((location: any) => {
-                            const isLocationOpen =
-                              activeSubMenu === location?.label;
-                            return (
-                              <div key={location.label}>
-                                <div
-                                  className="flex gap-10 text-black text-lg items-center cursor-pointer hover:text-primary"
-                                  onClick={() =>
-                                    setActiveSubMenu((prev) =>
-                                      prev === location.label
-                                        ? null
-                                        : location.label
-                                    )
-                                  }
-                                >
-                                  <span>{location.label}</span>
-                                  <BiChevronRight
-                                    size={18}
-                                    className={`transition-transform ${
-                                      isLocationOpen ? "rotate-90" : ""
-                                    }`}
-                                  />
-                                </div>
-                                <AnimatePresence initial={false}>
-                                  {isLocationOpen && (
-                                    <motion.div
-                                      initial={{ height: 0, opacity: 0 }}
-                                      animate={{ height: "auto", opacity: 1 }}
-                                      exit={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.3 }}
-                                      className="ml-4 mt-1 space-y-2 text-base text-black overflow-hidden"
-                                    >
-                                      {location.nestchildren.map(
-                                        (type: any) => (
-                                          <div key={type.label}>
-                                            <Link
-                                              href={type.url}
-                                              onClick={() => setIsOpen(false)}
-                                              className="block hover:text-primary"
-                                            >
-                                              {type.label}
-                                            </Link>
-
-                                           
-                                          </div>
-                                        )
-                                      )}
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                    {hasChildren && activeMenu === item.label && (
+                      <div className="ml-4 overflow-hidden mt-2 space-y-2">
+                        {item.children.map((location: any) => {
+                          const isLocationOpen =
+                            activeSubMenu === location?.label;
+                          return (
+                            <div key={location.label}>
+                              <div
+                                className="flex gap-10 text-black text-lg items-center cursor-pointer hover:text-primary"
+                                onClick={() =>
+                                  setActiveSubMenu((prev) =>
+                                    prev === location.label
+                                      ? null
+                                      : location.label
+                                  )
+                                }
+                              >
+                                <span>{location.label}</span>
+                                <BiChevronRight
+                                  size={18}
+                                  className={`transition-transform ${
+                                    isLocationOpen ? "rotate-90" : ""
+                                  }`}
+                                />
                               </div>
-                            );
-                          })}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                              {isLocationOpen && (
+                                <div className="ml-4 mt-1 space-y-2 text-base text-black overflow-hidden">
+                                  {location.nestchildren.map((type: any) => (
+                                    <div key={type.label}>
+                                      <Link
+                                        href={type.url}
+                                        onClick={() => setIsOpen(false)}
+                                        className="block hover:text-primary"
+                                      >
+                                        {type.label}
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -270,7 +251,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             <div />
           </div>
         </div>
-        <div className="hidden md:flex md:w-[50%] bg-[#fdf9f8] text-center flex-col justify-center items-center px-10 text-black">
+        <div className="hidden md:flex md:w-[40%] bg-[#fdf9f8] text-center flex-col justify-center items-center px-10 text-black">
           <div
             className="flex items-end absolute right-2 text-sm top-2 text-black justify-end w-full cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => setIsOpen(false)}
@@ -286,7 +267,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           </div>
           <Image
             alt="Roodraksh Group Logo"
-            src={Appasset.Logo1}
+            src={Appassets.Logo}
             width={1920}
             height={1080}
             priority
@@ -347,7 +328,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

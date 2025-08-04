@@ -1,3 +1,11 @@
+import MainBanner from "@/components/Landingpage/MainBanner";
+import StatsSection from "@/components/Landingpage/StatsSection";
+
 export default function Home() {
-  return <div className="h-screen">HOME</div>;
+  return (
+    <div className="">
+      <MainBanner />
+      <StatsSection />
+    </div>
+  );
 }
