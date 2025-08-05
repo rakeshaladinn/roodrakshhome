@@ -37,7 +37,7 @@ const bannerData = [
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 mt-22 rounded-b-2xl overflow-hidden ">
+    <div className="relative mx-3 top-24 rounded-b-2xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
@@ -74,11 +74,15 @@ const MainBanner = () => {
                 <Button
                   text="Explore Properties"
                   icon={<FaArrowRightLong />}
-                  className="bg-primary text-white px-5 py-3 text-base sm:text-lg md:text-xl w-fit mt-6 clip-top-right"
+                  className="bg-primary hover:bg-black transition-all duration-500 text-white px-5 py-3 text-base sm:text-lg md:text-xl w-fit mt-6 clip-top-right"
                 />
               </div>
-              <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0">
-                <div className="bg-white/20 text-white rounded-full p-6 cursor-pointer hover:scale-110 transition-transform">
+              <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0 relative">
+                <div className="absolute w-14 h-14 rounded-full bg-white opacity-70 animate-ping [animation-duration:1s]"></div>
+                <div className="absolute w-16 h-16 rounded-full bg-white opacity-50 animate-ping  [animation-duration:4s] delay-400"></div>
+                <div className="absolute w-20 h-20 rounded-full bg-white opacity-30 animate-ping [animation-duration:7s]"></div>
+
+                <div className="bg-white/20 relative z-10 text-white rounded-full p-6 cursor-pointer hover:scale-110 transition-transform">
                   <IoIosPlay className="text-5xl" />
                 </div>
               </div>

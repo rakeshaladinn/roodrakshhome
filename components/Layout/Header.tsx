@@ -146,7 +146,7 @@ const Header = () => {
           <Button
             text="Add Listing"
             icon={<FaArrowRightLong />}
-            className="bg-primary text-white px-4 py-2 rounded-2xl items-center flex clip-top-right"
+            className="bg-primary hover:bg-black transition-all duration-500 text-white px-4 py-2 rounded-2xl items-center flex clip-top-right"
           />
           <button
             className="flex hover:text-primary transition-all duration-500 items-center justify-end gap-2 cursor-pointer "

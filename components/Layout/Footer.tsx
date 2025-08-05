@@ -33,7 +33,7 @@ export default function Footer() {
         {/* Top section */}
         <div className="flex flex-col lg:flex-row justify-between gap-12 pb-12">
           {/* Logo and newsletter */}
-          <div className="w-full lg:w-1/3 flex flex-col items-start md:items-center lg:items-start text-center lg:text-left">
+          <div className="w-full lg:w-[40%] flex flex-col items-start md:items-center lg:items-start text-center lg:text-left">
             <Image
               alt="Roodraksh group"
               src={Appassets.Logo}
@@ -42,12 +42,12 @@ export default function Footer() {
               priority
               className="w-auto h-24 object-contain mb-6"
             />
-            <p className="text-base  text-white text-start md:text-center lg:text-start tracking-wide max-w-xs mb-6">
+            <p className=" text-base 2xl:text-lg  text-white text-start md:text-center lg:text-start tracking-wide max-w-lg mb-6">
               Discover why our residents love calling us home from breathtaking
               views and luxury finishes to unmatched service and community
               living, their stories reflect
             </p>
-            <form className="flex w-full max-w-md bg-white rounded-full p-2">
+            <form className="flex w-full max-w-lg bg-white rounded-full p-2">
               <input
                 type="email"
                 placeholder="Email address"
@@ -55,7 +55,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-primary text-white text-base md:text-lg rounded-full px-4 md:px-6 py-2 transition-colors"
+                className="bg-primary hover:bg-black cursor-pointer duration-500 text-white text-base md:text-lg rounded-full px-4 md:px-6 py-3 transition-colors"
               >
                 SUBSCRIBE
               </button>
@@ -63,10 +63,10 @@ export default function Footer() {
           </div>
 
           {/* Navigation + Contacts + Services */}
-          <div className="w-full justify-center lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="w-full justify-center lg:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Useful Links */}
             <div className="flex flex-col items-start  w-full ">
-              <h3 className="text-lg font-semibold text-center   mb-4">
+              <h3 className="text-lg md:text-xl font-semibold text-center   mb-4">
                 Useful Link
               </h3>
               <ul className="space-y-2 text-start text-white">
@@ -74,7 +74,7 @@ export default function Footer() {
                   <li key={index}>
                     <Link
                       href={item.url}
-                      className="text-white text-start hover:text-primary transition-colors text-base"
+                      className="text-white text-start hover:text-primary transition-colors text-base md:text-lg"
                     >
                       {item.label}
                     </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
 
             {/* Services */}
             <div className="flex flex-col items-star tw-full">
-              <h3 className="text-lg font-semibold  text-start  mb-4">
+              <h3 className="text-lg md:text-xl font-semibold  text-start  mb-4">
                 Our Services
               </h3>
               <ul className="space-y-2 text-white">
@@ -103,13 +103,15 @@ export default function Footer() {
             </div>
             {/* Contact Info */}
             <div className="flex flex-col items-start text-center md:text-left w-full ">
-              <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-4">
+                Get In Touch
+              </h3>
               <ul className="space-y-3 text-white">
                 <li className="flex items-start gap-2">
                   <div>
                     <FaMapMarkerAlt className="w-4 h-4 text-white mt-1" />
                   </div>
-                  <span className="text-base text-start">
+                  <span className="text-base md:text-lg text-start">
                     Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
                     Guwahati - 781003
                   </span>
@@ -118,7 +120,9 @@ export default function Footer() {
                   <div>
                     <FaEnvelope className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-base md">info@roodraksh.co.in</span>
+                  <span className="text-base md:text-lg md">
+                    info@roodraksh.co.in
+                  </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div>
@@ -145,7 +149,7 @@ export default function Footer() {
               className=" bg-gray-700 hover:bg-primary hover:scale-110 transition-all duration-500 p-2 rounded-full"
               aria-label="Facebook"
             >
-              <FaFacebook className="w-6 h-6" />
+              <FaFacebook className="w-7 h-7" />
             </a>
             <a
               href="https://www.instagram.com/roodraksh_builders/"
@@ -153,7 +157,7 @@ export default function Footer() {
               className="bg-gray-700 hover:bg-primary hover:scale-110 transition-all duration-500 p-2 rounded-full"
               aria-label="Instagram"
             >
-              <FaInstagram className="w-6 h-6" />
+              <FaInstagram className="w-7 h-7" />
             </a>
           </div>
         </div>

@@ -138,10 +138,10 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
   return (
     <div
-      className={`fixed inset-0 z-40 overflow-y-hidden h-screen transition-transform duration-700 md:duration-[1.1s] ease-in-out bg-center bg-no-repeat md:bg-[url('/Banner01.png')] bg-cover ${
+      className={`fixed inset-0 z-40 overflow-y-hidden h-screen bg-center bg-no-repeat md:bg-[url('/Banner01.png')] bg-cover transition-all duration-900 ease-in-out ${
         isOpen
-          ? "translate-x-0   opacity-full "
-          : "translate-x-full  opacity-0   "
+          ? "translate-x-0 opacity-100 pointer-events-auto"
+          : "translate-x-full opacity-0 pointer-events-none"
       }`}
     >
       <div className="flex justify-end h-full w-full">
