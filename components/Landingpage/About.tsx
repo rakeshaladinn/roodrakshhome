@@ -16,7 +16,7 @@ const features = [
 
 const About = () => {
   return (
-    <div className="bg-[#FDF9F8]  py-10 md:py-20 px-5 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 bg-[url('/About/shape-1.png')] bg-contain bg-right-bottom bg-no-repeat">
+    <div className="bg-[#FDF9F8]  py-14 md:py-20   px-5 md:px-16 lg:px-20  flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 bg-[url('/About/shape-1.png')] bg-contain bg-right-bottom bg-no-repeat">
       {/* Left Image Section */}
       <div className="relative h-full w-full lg:w-1/2">
         {/* Bottom Image */}
@@ -64,7 +64,7 @@ const About = () => {
             <Button
               text="Learn More"
               icon={<FaArrowRight />}
-              className="bg-primary text-base md:text-lg hover:bg-black transition-all duration-500 text-white px-4 py-3 rounded-2xl items-center flex clip-top-right"
+              className="bg-primary text-base  hover:bg-black transition-all duration-500 text-white px-4 py-3 rounded-2xl items-center flex clip-top-right"
             />
           </div>
           {/* <div className="bg-lime-100 border-primary/60 flex justify-center items-center flex-col h-40 w-52 px-12  py-6 rounded-xl text-center">

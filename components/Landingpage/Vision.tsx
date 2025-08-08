@@ -1,8 +1,8 @@
 "use client";
-
 import React from "react";
 import { FaHome, FaPersonBooth, FaHandHoldingUsd } from "react-icons/fa";
 import Mainheading from "../Comman/Mainheading";
+import Link from "next/link";
 
 const services = [
   {
@@ -27,7 +27,7 @@ const services = [
 
 const Vision = () => {
   return (
-    <section className="py-14 md:py-20 px-4 md:px-8 lg:px-20 ">
+    <section className="py-14 md:py-20 px-5 md:px-16 lg:px-20 ">
       <div className="text-center flex items-center justify-center mb-8">
         <Mainheading
           SubTitle="Our Mission"
@@ -54,10 +54,13 @@ const Vision = () => {
             <p className="text-[#5f6f81] text-base mb-6">
               {service?.description}
             </p>
-            <button className="text-black font-semibold flex w-full items-center gap-2 justify-center text-sm">
+            <Link
+              href=""
+              className="text-black  group-hover:text-primary cursor-pointer font-semibold flex w-full items-center gap-2 justify-center text-sm"
+            >
               <FaHome className="text-lg" />
               Read More
-            </button>
+            </Link>
           </div>
         ))}
       </div>

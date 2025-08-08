@@ -1,3 +1,4 @@
+"use client";
 import { Appassets } from "@/constants/Appassets";
 import Image from "next/image";
 import React from "react";
@@ -13,8 +14,8 @@ const features = [
 
 const Whoweare = () => {
   return (
-    <div className="bg-[#FDF9F8]  py-10 md:py-20 px-5 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-5 2xl:gap-16 relative overflow-hidden bg-[url('/whoweare/right-shape.png')] bg-no-repeat bg-right-bottom">
-      <div className="relative w-full md:w-1/2 lg:w-[52%] 2xl:w-1/2 overflow-hidden">
+    <div className="bg-[#FDF9F8]  py-14 md:py-20  px-5 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 xl:gap-5 2xl:gap-16 relative overflow-hidden bg-[url('/whoweare/right-shape.png')] bg-no-repeat bg-right-bottom">
+      <div className="relative w-full  lg:w-[52%] 2xl:w-1/2 overflow-hidden">
         <div className="absolute -left-12  md:-left-10 top-1/3 transform -rotate-90 z-10">
           <div className="flex flex-col items-center gap-2">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
@@ -50,7 +51,7 @@ const Whoweare = () => {
       </div>
 
       {/* Right Content */}
-      <div className=" w-full md:w-1/2 lg:w-[48%] 2xl:w-1/2">
+      <div className=" w-full lg:w-[48%] 2xl:w-1/2">
         <div className="mb-6">
           <Mainheading
             SubTitle="  Who We Are"
@@ -80,7 +81,7 @@ const Whoweare = () => {
           <Button
             text="About us more"
             icon={<FaHome />}
-            className="bg-black hover:bg-primary transition-all duration-300 text-white px-6 py-4 rounded-full text-base md:text-lg font-medium"
+            className="bg-black hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
           />
           <a
             href="tel:+91-9164-67-9164"

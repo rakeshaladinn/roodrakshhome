@@ -13,6 +13,7 @@ interface SliderProps {
     md?: number;
     lg?: number;
     xl?: number;
+    xss?: number;
   };
   navigation?: boolean;
   gap?: number;
@@ -58,6 +59,8 @@ const Slider: React.FC<SliderProps> = ({
           setSlidesToShow(breakpoints.sm);
         } else if (breakpoints.xs && window.innerWidth >= 480) {
           setSlidesToShow(breakpoints.xs);
+        } else if (breakpoints?.xss && window.innerWidth <= 480) {
+          setSlidesToShow(breakpoints?.xss);
         } else {
           setSlidesToShow(1);
         }

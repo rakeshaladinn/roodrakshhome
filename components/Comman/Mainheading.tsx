@@ -32,7 +32,7 @@ const Mainheading: React.FC<Mainprops> = ({
 
       {Title && (
         <h2
-          className={` text-3xl md:text-4xl lg:text-5xl font-semibold  leading-tight mt-2 font-sans ${
+          className={` text-2xl md:text-3xl lg:text-4xl font-semibold  leading-tight mt-2 font-sans ${
             color ? color : "text-black"
           } ${center ? "text-center" : "text-start"}`}
         >

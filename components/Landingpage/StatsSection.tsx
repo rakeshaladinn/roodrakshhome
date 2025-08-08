@@ -11,7 +11,7 @@ const stats = [
 const StatsSection = () => {
   return (
     <section className="bg-gray-100 relative -z-10 py-14">
-      <div className=" mt-24 px-4 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+      <div className=" mt-20 px-4 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
         {stats.map((stat, index) => (
           <div key={index}>
             <h3 className="text-3xl font-bold text-black">{stat.number}</h3>

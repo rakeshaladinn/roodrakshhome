@@ -43,7 +43,7 @@ export default function Button({
           type={type}
           disabled={loading || disabled}
           onClick={onClick}
-          className={` ${className}  hover:scale-105 active:scale-95 whitespace-nowrap  transition-all duration-200 ease-in-out cursor-pointer disabled:cursor-not-allowed flex items-center justify-center gap-2 `}
+          className={` ${className}  hover:scale-105 capitalize active:scale-95 whitespace-nowrap  transition-all duration-200 ease-in-out cursor-pointer disabled:cursor-not-allowed flex items-center justify-center gap-2 `}
         >
           {text} {loading ? <p className={`${loaderType} ml-2`}></p> : icon}
         </button>

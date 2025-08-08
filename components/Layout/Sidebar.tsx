@@ -3,9 +3,12 @@ import { Appassets } from "@/constants/Appassets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { BiChevronRight } from "react-icons/bi";
+import { BiChevronRight, BiMessageDetail } from "react-icons/bi";
 import { CiPhone } from "react-icons/ci";
+import { FaLocationArrow } from "react-icons/fa6";
+import { FiPhoneCall } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -135,17 +138,28 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <div
-      className={`fixed inset-0 z-40 overflow-y-hidden h-screen bg-center bg-no-repeat md:bg-[url('/Banner01.png')] bg-cover transition-all duration-900 ease-in-out ${
+      className={`fixed inset-0 z-40  h-screen  transition-all duration-900 ease-in-out ${
         isOpen
           ? "translate-x-0 opacity-100 pointer-events-auto"
           : "translate-x-full opacity-0 pointer-events-none"
       }`}
     >
-      <div className="flex justify-end h-full w-full">
-        <div className="w-[70%] block md:hidden md:w-[50%] bg-white relative text-white  md:bg-center md:bg-no-repeat md:bg-[url('/Banner02.png')] md:bg-cover">
+      <div className="flex justify-end h-full bg-black/80 w-full">
+        <div className="w-[70%] block md:hidden md:w-[50%] bg-white relative text-white ">
           <div className="relative z-10   flex-col h-full justify-between px-10 py-8">
             <div
               className="flex items-center gap-2 text-black md:text-white cursor-pointer hover:opacity-80 transition-opacity"
@@ -162,10 +176,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               <span className="text-lg font-medium">CLOSE</span>
             </div>
 
-            <nav
-              ref={wrapperRef}
-              className="flex flex-col md:hidden h-full justify-start mt-20 gap-6 text-lg tracking-wide"
-            >
+            <nav className="flex flex-col md:hidden h-full justify-start mt-20 gap-6 text-lg tracking-wide">
               {navItems.map((item: any) => {
                 const hasChildren = item.children?.length > 0;
 
@@ -184,7 +195,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                         <span>{item.label}</span>
                         <BiChevronRight
                           size={20}
-                          className={`transition-transform ${
+                          className={`transition-transform duration-500 ${
                             activeMenu === item.label ? "rotate-90" : ""
                           }`}
                         />
@@ -199,15 +210,22 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                       </Link>
                     )}
 
-                    {hasChildren && activeMenu === item.label && (
-                      <div className="ml-4 overflow-hidden mt-2 space-y-2">
+                    {/* First Level Dropdown */}
+                    {hasChildren && (
+                      <div
+                        className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
+                          activeMenu === item.label
+                            ? "max-h-[1000px] opacity-100 mt-2"
+                            : "max-h-0  mt-0"
+                        }`}
+                      >
                         {item.children.map((location: any) => {
                           const isLocationOpen =
                             activeSubMenu === location?.label;
                           return (
                             <div key={location.label}>
                               <div
-                                className="flex gap-10 text-black text-lg items-center cursor-pointer hover:text-primary"
+                                className="flex gap-10 text-black text-lg items-center cursor-pointer hover:text-primary transition-colors"
                                 onClick={() =>
                                   setActiveSubMenu((prev) =>
                                     prev === location.label
@@ -216,29 +234,36 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                                   )
                                 }
                               >
-                                <span>{location.label}</span>
+                                <span className="text-black">
+                                  {location.label}
+                                </span>
                                 <BiChevronRight
                                   size={18}
-                                  className={`transition-transform ${
+                                  className={`transition-transform duration-500 ${
                                     isLocationOpen ? "rotate-90" : ""
                                   }`}
                                 />
                               </div>
-                              {isLocationOpen && (
-                                <div className="ml-4 mt-1 space-y-2 text-base text-black overflow-hidden">
-                                  {location.nestchildren.map((type: any) => (
-                                    <div key={type.label}>
-                                      <Link
-                                        href={type.url}
-                                        onClick={() => setIsOpen(false)}
-                                        className="block hover:text-primary"
-                                      >
-                                        {type.label}
-                                      </Link>
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
+
+                              {/* Second Level Dropdown */}
+                              <div
+                                className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
+                                  isLocationOpen
+                                    ? "max-h-[500px] opacity-100 mt-1"
+                                    : "max-h-0  mt-0"
+                                }`}
+                              >
+                                {location.nestchildren.map((type: any) => (
+                                  <Link
+                                    key={type.label}
+                                    href={type.url}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block text-black hover:text-primary transition-colors text-base"
+                                  >
+                                    {type.label}
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
                           );
                         })}
@@ -248,12 +273,21 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 );
               })}
             </nav>
+
             <div />
           </div>
         </div>
-        <div className="hidden md:flex md:w-[40%] bg-[#fdf9f8] text-center flex-col justify-center items-center px-10 text-black">
+        <div className="hidden pb-10 overflow-y-auto scrollbar-hide md:flex md:max-w-sm bg-white  text-center flex-col  items-start px-5 text-black">
+          <Image
+            alt="Roodraksh Group Logo"
+            src={Appassets.BlackLogo}
+            width={1920}
+            height={1080}
+            priority
+            className="w-fit object-contain h-16 mt-10"
+          />
           <div
-            className="flex items-end absolute right-2 text-sm top-2 text-black justify-end w-full cursor-pointer hover:opacity-80 transition-opacity"
+            className="flex items-end absolute left-[96.5%] p-1 border-1 border-gray-500 rounded-full w-fit top-3  z-50  text-xl text-black justify-start  cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => setIsOpen(false)}
             role="button"
             tabIndex={0}
@@ -263,45 +297,57 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               }
             }}
           >
-            <IoClose size={24} />
+            <IoClose
+              size={25}
+              className="hover:scale-125 transition-all duration-500"
+            />
           </div>
-          <Image
-            alt="Roodraksh Group Logo"
-            src={Appassets.Logo}
-            width={1920}
-            height={1080}
-            priority
-            className="w-full object-contain h-16"
-          />
-          <div className="space-y-10 text-base mt-10">
-            <div>
-              <h4 className="text-xl font-medium mb-1">Locations</h4>
-              <div className="flex gap-3">
-                {" "}
-                <p className="text-lg font-medium">Guwahati:</p>
-                <p className="text-black/80 text-start">
-                  Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
-                  Guwahati - 781003
-                </p>
-              </div>
-              <div className="flex gap-5">
-                <p className="text-lg font-medium">Agartala:</p>
-                <p className="text-black/80 text-start">
-                  Dhaleswar, Near Prachya Bharati School North Side Shiv Mandir
-                  Agartala - 799007, West Tripura
-                </p>
+          <div className="space-y-6 text-base mt-6">
+            <div className="text-start">
+              At Roodraksh Group, we have been reshaping the urban landscapes of
+              North-Eastern India especially in Guwahati and Agartala through
+              meticulously envisioned residential and commercial developments.
+            </div>
+            <div className="flex-col justify-start items-start flex w-full">
+              <h4 className="text-xl flex gap-2 items-center  font-medium text-start  border-b-2 w-full pb-3 mb-2 border-gray-300">
+                Locations
+                <span className="mt-1">
+                  <FaLocationArrow size={20} />
+                </span>
+              </h4>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="hidden lg:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors">
+                  <p className="text-lg font-medium">Guwahati:</p>
+                  <p className="text-black/80 text-start">
+                    Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
+                    Guwahati - 781003
+                  </p>
+                </div>
+                <div className="hidden lg:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors">
+                  <p className="text-lg font-medium">Agartala:</p>
+                  <CiPhone size={20} />
+                  <p className="text-black/80 text-start">
+                    Dhaleswar, Near Prachya Bharati School North Side Shiv
+                    Mandir Agartala - 799007, West Tripura
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex-col flex">
-              <h4 className="text-xl font-medium mb-1">Phone Support</h4>
-              <div className="flex flex-col items-center space-y-2">
+            <div className="flex-col justify-start items-start flex w-full">
+              <h4 className="text-xl flex gap-2 items-center  font-medium text-start  border-b-2 w-full pb-3  mb-3 border-gray-300">
+                Get in Touch
+                <span className="mt-1">
+                  <BiMessageDetail />
+                </span>
+              </h4>
+              <div className="flex flex-col items-start  space-y-2">
                 <a
                   href="tel:+91-9164679164"
                   className="hidden lg:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors"
                 >
                   <p className="text-lg font-medium">Guwahati:</p>
-                  <CiPhone size={20} />
-                  <span className="text-base  hover:text-primary transition-all duration-300">
+                  <FiPhoneCall size={20} />
+                  <span className="text-bas hover:text-primary transition-all duration-300">
                     +91-9164-67-9164
                   </span>
                 </a>
@@ -310,21 +356,24 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                   className="hidden lg:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors"
                 >
                   <p className="text-lg font-medium">Agartala:</p>
-                  <CiPhone size={20} />
+                  <FiPhoneCall size={20} />
                   <span className="text-base hover:text-primary transition-all duration-300">
                     +91-9057-64-4644
                   </span>
                 </a>
+                <a
+                  href="mailto:info@roodraksh.co.in"
+                  className="flex items-center justify-start text-start gap-2 cursor-pointer text-black  transition-colors"
+                >
+                  {" "}
+                  <p className="text-lg font-medium">Email:</p>
+                  <MdEmail size={20} />
+                  <span className="hover:text-primary">
+                    {" "}
+                    info@roodraksh.co.in
+                  </span>
+                </a>
               </div>
-            </div>
-            <div>
-              <h4 className="text-xl font-medium mb-1">Connect With Us</h4>
-              <a
-                href="mailto:info@roodraksh.co.in"
-                className="text-black/80 hover:text-primary transition-all duration-300"
-              >
-                info@roodraksh.co.in
-              </a>
             </div>
           </div>
         </div>

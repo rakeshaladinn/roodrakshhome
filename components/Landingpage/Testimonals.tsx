@@ -1,0 +1,123 @@
+"use client";
+import React from "react";
+import { FaHome, FaStar } from "react-icons/fa";
+import Image from "next/image";
+import Mainheading from "../Comman/Mainheading";
+import Button from "../Controls/Button";
+import Slider from "../UI/Slider";
+
+const testimonials = [
+  {
+    name: "Marvin McKinney",
+    role: "Product Manager",
+    message:
+      "From the moment we arrived, every detail was flawless. The staff anticipated our every need, and the suite was pure perfection. We’ll be back soon!",
+  },
+  {
+    name: "Leslie Alexander",
+    role: "UX Designer",
+    message:
+      "An unforgettable experience. The ambiance, the views, the service—everything was just perfect. Highly recommended!",
+  },
+  {
+    name: "Marvin McKinney",
+    role: "Product Manager",
+    message:
+      "From the moment we arrived, every detail was flawless. The staff anticipated our every need, and the suite was pure perfection. We’ll be back soon!",
+  },
+  {
+    name: "Leslie Alexander",
+    role: "UX Designer",
+    message:
+      "An unforgettable experience. The ambiance, the views, the service—everything was just perfect. Highly recommended!",
+  },
+];
+
+const avatarGroups = [
+  ["/testimonals/client-03.png"],
+  ["/testimonals/client-04.png"],
+  ["/testimonals/client-03.png"],
+  ["/testimonals/client-04.png"],
+  ["/testimonals/client-03.png"],
+];
+
+const Testimonials = () => {
+  return (
+    <section className="px-5 md:px-16 lg:px-20 py-14 md:py-20 ">
+      <div className="">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 ">
+          <div className="w-full lg:w-1/2  xl:w-[47%] bg-[url('/testimonals/left-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
+            <Mainheading
+              SubTitle="Testimonial"
+              Title="What Our Residents Say"
+              Icon={<FaHome />}
+              Description="Discover why our residents love calling us home—from breathtaking views and luxury finishes to unmatched service and community living, their stories reflect"
+            />
+            <div className="mt-6">
+              <Button
+                text="View All Review"
+                icon={<FaHome />}
+                className="bg-black hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
+              />
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 xl:w-[47%] flex flex-col gap-10  bg-[url('/testimonals/map-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
+            <Slider
+              breakpoints={{ lg: 1, md: 1 }}
+              navigatorDots={false}
+              autoplay
+              autoplayDelay={3000}
+            >
+              {testimonials.map((item, index) => (
+                <div
+                  key={index}
+                  className=" border border-primary mx-2 rounded-xl  h-72 lg:h-64 p-8 shadow-md relative "
+                >
+                  <div className="flex justify-center text-yellow-400 text-xl mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} />
+                    ))}
+                  </div>
+                  <p className="text-center text-lg text-gray-700 mb-6">
+                    {item.message}
+                  </p>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-[#0C1F3F]">
+                      {item.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">{item.role}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+            <div className="max-w-xl mx-auto">
+              <Slider
+                breakpoints={{ lg: 4, md: 4, sm: 4, xs: 4, xss: 4 }}
+                autoplay
+                autoplayDelay={3000}
+                navigatorDots={false}
+              >
+                {avatarGroups.map((group, index) => (
+                  <div key={index} className=" w-full mx-1 gap-6 ">
+                    {group.map((src, idx) => (
+                      <Image
+                        key={idx}
+                        src={src}
+                        alt={`user-${idx}`}
+                        width={1920}
+                        height={1080}
+                        className="rounded-full h-16 w-16 border-2 border-white shadow-md"
+                      />
+                    ))}
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;

@@ -1,5 +1,4 @@
 "use client";
-
 import { Appassets } from "@/constants/Appassets";
 import Image from "next/image";
 import React from "react";
@@ -37,7 +36,7 @@ const bannerData = [
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 top-24 rounded-b-2xl overflow-hidden ">
+    <div className="relative mx-3 top-20 rounded-b-2xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
@@ -63,22 +62,22 @@ const MainBanner = () => {
 
             <div className="absolute inset-0 z-20 flex flex-col md:flex-row  justify-evenly md:justify-center items-center md:items-center text-white px-5 sm:px-10 md:px-16 lg:px-24">
               <div className="w-full  md:w-[80%] xl:w-[60%] text-white flex flex-col  items-center md:items-start text-center md:text-left">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                   {item.title} <br />
                   {item.subtitle}
                 </h1>
-                <p className="mt-4 max-w-xl text-base sm:text-lg md:text-xl text-white/90">
+                <p className="mt-4 max-w-xl text-base md:text-lg text-white/90">
                   {item.description}
                 </p>
 
                 <Button
                   text="Explore Properties"
                   icon={<FaArrowRightLong />}
-                  className="bg-primary hover:bg-black transition-all duration-500 text-white px-5 py-3 text-base sm:text-lg md:text-xl w-fit mt-6 clip-top-right"
+                  className="bg-primary hover:bg-black transition-all duration-500 text-white px-4 py-3 text-base  w-fit mt-6 clip-top-right"
                 />
               </div>
               <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0 relative">
-                <div className="absolute w-14 h-14 rounded-full bg-white opacity-70 animate-ping [animation-duration:1s]"></div>
+                <div className="absolute w-20 h-20 rounded-full bg-white opacity-70 animate-ping [animation-duration:1s]"></div>
                 <div className="absolute w-16 h-16 rounded-full bg-white opacity-50 animate-ping  [animation-duration:4s] delay-400"></div>
                 <div className="absolute w-20 h-20 rounded-full bg-white opacity-30 animate-ping [animation-duration:7s]"></div>
 

@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { navItems } from "./Sidebar";
 import { FaInstagram } from "react-icons/fa6";
+import { FiPhoneCall } from "react-icons/fi";
 
 export default function Footer() {
   const servicesLinks = [
@@ -28,8 +29,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[url('/banners/footer.png')] text-white pt-16 bg-cover bg-center bg-no-repeat">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <footer className="relative bg-[url('/banners/footer.png')] text-white  bg-cover bg-center bg-no-repeat">
+      <div className="px-4 sm:px-6 lg:px-8 pt-16 bg-[#0c151c]/20">
         {/* Top section */}
         <div className="flex flex-col lg:flex-row justify-between gap-12 pb-12">
           {/* Logo and newsletter */}
@@ -116,21 +117,24 @@ export default function Footer() {
                     Guwahati - 781003
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <div>
-                    <FaEnvelope className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-base md:text-lg md">
+                <a
+                  href="mailto: info@roodraksh.co.in"
+                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                >
+                  <FaEnvelope className="w-4 h-4 text-white" />
+                  <span className="text-base hover:text-primary transition-all duration-300">
                     info@roodraksh.co.in
                   </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div>
-                    <FaPhoneAlt className="w-4 h-4 text-white" />
-                  </div>
-
-                  <span className="text-base md:text-lg">(094) 542 - 4780</span>
-                </li>
+                </a>
+                <a
+                  href="tel:+91-9057644644"
+                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                >
+                  <FiPhoneCall size={20} />
+                  <span className="text-base hover:text-primary transition-all duration-300">
+                    +91-9057-64-4644
+                  </span>
+                </a>
               </ul>
             </div>
           </div>

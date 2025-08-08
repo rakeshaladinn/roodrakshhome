@@ -14,4 +14,15 @@ export class Appassets {
 
   //Cta
   static Cta = require("../public/cta/propertie-feature-image.png");
+
+  // Blogs Images
+  static Blog1 = require("../public/blogs/news-1.jpg");
+  static Blog2 = require("../public/blogs/news-2.jpg");
+  static Blog3 = require("../public/blogs/news-3.jpg");
+
+  // project images
+  static Project_1 = require("../public/projects/project-1.webp");
+  static Project_2 = require("../public/projects/project-2.webp");
+  static Project_3 = require("../public/projects/project-3.webp");
+  static Project_agency = require("../public/projects/agenc-1.webp");
 }
