@@ -83,11 +83,11 @@ export default function FeaturedProperty() {
         </div>
 
         {/* Property Cards */}
-        <div className="space-y-20">
+        <div className=" space-y-20 md:space-y-24">
           {properties.map((property, index) => (
             <div key={index} className={`max-w-7xl relative mx-auto`}>
               <div
-                className={`flex flex-col-reverse gap-8  lg:flex-row ${
+                className={`flex flex-col-reverse gap-8 md:gap-6  lg:flex-row ${
                   index % 2 === 0 ? "lg:flex-row-reverse" : ""
                 }`}
               >
@@ -165,8 +165,8 @@ export default function FeaturedProperty() {
                 </div>
 
                 {/* Property Image */}
-                <div className="w-full lg:w-[40%] flex flex-col md:flex-row items-start gap-4 2xl:gap-10">
-                  <div className="h-64 w-full md:w-[80%] lg:w-80 ">
+                <div className="w-full lg:w-[45%] flex flex-col md:flex-row items-start gap-3 2xl:gap-10">
+                  <div className="h-64 xl:h-80 w-full md:w-[80%] lg:w-88 ">
                     <Image
                       src={property.propertyImage}
                       alt="Property"
