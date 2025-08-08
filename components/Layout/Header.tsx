@@ -83,7 +83,7 @@ const Header = () => {
                 {item.children && <RiArrowDropDownLine className="text-2xl" />}
               </Link>
 
-              {item?.children && activeDropdown === true && (
+              {/* {item?.children && activeDropdown === true && (
                 <div
                   className="absolute mt-6 shadow-xl rounded-md top-full -left-30  bg-center bg-no-repeat bg-[url('/Banner01.png')] bg-cover   z-50"
                   onMouseLeave={() => setActiveDropdown(false)}
@@ -137,7 +137,7 @@ const Header = () => {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>
