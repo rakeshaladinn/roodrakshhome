@@ -276,7 +276,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             <div />
           </div>
         </div>
-        <div className="hidden pb-10 overflow-y-auto scrollbar-hide md:flex md:max-w-sm bg-white  text-center flex-col  items-start px-5 text-black">
+        <div className="hidden pb-10 shadow-xl overflow-y-auto scrollbar-hide md:flex md:max-w-sm bg-white  text-center flex-col  items-start px-5 text-black">
           <Image
             alt="Roodraksh Group Logo"
             src={Appassets.BlackLogo}
