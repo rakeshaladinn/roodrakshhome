@@ -48,19 +48,6 @@ export default function Footer() {
               views and luxury finishes to unmatched service and community
               living, their stories reflect
             </p>
-            <form className="flex w-full max-w-lg bg-white rounded-full p-2">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-1 text-lg rounded-l-full border-none focus:outline-none bg-white text-gray-800 placeholder:text-gray-800 pl-4 py-2"
-              />
-              <button
-                type="submit"
-                className="bg-primary hover:bg-black cursor-pointer duration-500 text-white text-base md:text-lg rounded-full px-4 md:px-6 py-3 transition-colors"
-              >
-                SUBSCRIBE
-              </button>
-            </form>
           </div>
 
           {/* Navigation + Contacts + Services */}

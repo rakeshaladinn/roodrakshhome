@@ -38,7 +38,7 @@ export default function BlogNewsSection() {
   ];
 
   return (
-    <section className="w-full  py-14 md:py-20 px-5 md:px-16 lg:px-20 ">
+    <section className="w-full  py-14 md:py-20 xl:py-24 px-5 md:px-16 lg:px-20 ">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 ">
         <div className="max-w-lg">
           <Mainheading
@@ -54,7 +54,7 @@ export default function BlogNewsSection() {
           className="bg-black w-fit hover:bg-primary text-white rounded-full px-6 py-3 text-base font-medium flex items-center gap-2"
         />
       </div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
         {blogPosts.map((post) => (
           <div
             key={post.id}
@@ -82,13 +82,13 @@ export default function BlogNewsSection() {
                 <span>{post?.category}</span>
               </div>
 
-              <h3 className="text-xl pt-4 font-semibold text-black leading-snug">
+              <h3 className="text-lg pt-4 font-medium text-gray-700 leading-snug">
                 {post?.title}
               </h3>
 
               <Link
                 href={post?.link}
-                className="text-primary hover:text-black font-semibold text-base hover:decoration-black uppercase underline underline-offset-4 decoration-primary"
+                className="text-primary hover:text-black font-semibold text-sm hover:decoration-black uppercase underline underline-offset-4 decoration-primary"
               >
                 Read More
               </Link>

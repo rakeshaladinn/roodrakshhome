@@ -59,17 +59,17 @@ const properties = [
 
 export default function FeaturedProperty() {
   return (
-    <section className="bg-[#192f3e] text-white py-14 md:py-20  px-5 md:px-16 lg:px-20">
+    <section className="bg-[#292b2c] text-white py-14 md:py-20  xl:py-24 px-5 md:px-16 lg:px-20">
       <div>
         {/* Heading Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
-          <div className="max-w-lg">
+          <div className="max-w-xl">
             <Mainheading
               Title="Feature Property"
               color="text-white"
               Description=""
             />
-            <p className="text-sm sm:text-base md:text-lg text-white">
+            <p className="text-base md:text-lg text-white">
               We are a real estate firm with over 20 years of expertise, and our
               main goal is to provide amazing locations to our partners and
               clients.

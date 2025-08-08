@@ -27,7 +27,7 @@ const services = [
 
 const Vision = () => {
   return (
-    <section className="py-14 md:py-20 px-5 md:px-16 lg:px-20 ">
+    <section className="py-14 md:py-20 xl:py-24 px-5 md:px-16 lg:px-20  ">
       <div className="text-center flex items-center justify-center mb-8">
         <Mainheading
           SubTitle="Our Mission"

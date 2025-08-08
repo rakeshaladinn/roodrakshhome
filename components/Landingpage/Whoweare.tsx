@@ -14,7 +14,7 @@ const features = [
 
 const Whoweare = () => {
   return (
-    <div className="bg-[#FDF9F8]  py-14 md:py-20  px-5 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 xl:gap-5 2xl:gap-16 relative overflow-hidden bg-[url('/whoweare/right-shape.png')] bg-no-repeat bg-right-bottom">
+    <div className="bg-[#FDF9F8]  py-14 md:py-20 xl:py-24  px-5 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 xl:gap-5 2xl:gap-16 relative overflow-hidden bg-[url('/whoweare/right-shape.png')] bg-no-repeat bg-right-bottom">
       <div className="relative w-full  lg:w-[52%] 2xl:w-1/2 overflow-hidden">
         <div className="absolute -left-12  md:-left-10 top-1/3 transform -rotate-90 z-10">
           <div className="flex flex-col items-center gap-2">

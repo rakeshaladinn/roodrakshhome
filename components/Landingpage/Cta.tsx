@@ -8,9 +8,9 @@ import Button from "../Controls/Button";
 
 const Cta = () => {
   return (
-    <section className="bg-[#192f3e]   text-white relative overflow-hidden">
+    <section className="bg-[#292b2c]   text-white relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch z-10 relative">
-        <div className="flex flex-col justify-center space-y-6 px-5 md:px-16 lg:pl-20 py-12 h-full">
+        <div className="flex flex-col justify-center space-y-6 px-5 md:px-16 lg:pl-20 py-12 lg:py-20 h-full">
           <Mainheading
             SubTitle="REAL ESTATE"
             color="text-white"

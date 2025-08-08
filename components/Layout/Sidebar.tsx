@@ -158,7 +158,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           : "translate-x-full opacity-0 pointer-events-none"
       }`}
     >
-      <div className="flex justify-end h-full bg-black/80 w-full">
+      <div className="flex justify-end h-full  w-full">
         <div className="w-[70%] block md:hidden md:w-[50%] bg-white relative text-white ">
           <div className="relative z-10   flex-col h-full justify-between px-10 py-8">
             <div

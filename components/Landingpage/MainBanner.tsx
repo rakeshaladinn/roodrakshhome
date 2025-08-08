@@ -36,7 +36,7 @@ const bannerData = [
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 top-20 rounded-b-2xl overflow-hidden ">
+    <div className="relative mx-3 top-20 rounded-3xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
@@ -46,7 +46,7 @@ const MainBanner = () => {
         {bannerData.map((item) => (
           <div
             key={item.id}
-            className="relative w-full h-[65vh] sm:h-[70vh] md:h-[75vh] lg:h-[90vh] xl:h-[100vh] 2xl:h-[80vh] overflow-hidden"
+            className="relative rounded-3xl w-full h-[65vh] sm:h-[70vh] md:h-[75vh] lg:h-[90vh] xl:h-[100vh] 2xl:h-[80vh] overflow-hidden"
           >
             {/* Background Image */}
             <Image
@@ -61,8 +61,8 @@ const MainBanner = () => {
             <div className="absolute inset-0 rounded-3xl bg-black/60 z-10" />
 
             <div className="absolute inset-0 z-20 flex flex-col md:flex-row  justify-evenly md:justify-center items-center md:items-center text-white px-5 sm:px-10 md:px-16 lg:px-24">
-              <div className="w-full  md:w-[80%] xl:w-[60%] text-white flex flex-col  items-center md:items-start text-center md:text-left">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+              <div className="w-full   text-white flex flex-col  items-center md:items-start text-center md:text-left">
+                <h1 className="text-3xl capitalize md:text-4xl lg:text-5xl font-semibold leading-tight">
                   {item.title} <br />
                   {item.subtitle}
                 </h1>
@@ -76,7 +76,7 @@ const MainBanner = () => {
                   className="bg-primary hover:bg-black transition-all duration-500 text-white px-4 py-3 text-base  w-fit mt-6 clip-top-right"
                 />
               </div>
-              <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0 relative">
+              {/* <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0 relative">
                 <div className="absolute w-20 h-20 rounded-full bg-white opacity-70 animate-ping [animation-duration:1s]"></div>
                 <div className="absolute w-16 h-16 rounded-full bg-white opacity-50 animate-ping  [animation-duration:4s] delay-400"></div>
                 <div className="absolute w-20 h-20 rounded-full bg-white opacity-30 animate-ping [animation-duration:7s]"></div>
@@ -84,7 +84,7 @@ const MainBanner = () => {
                 <div className="bg-white/20 relative z-10 text-white rounded-full p-6 cursor-pointer hover:scale-110 transition-transform">
                   <IoIosPlay className="text-5xl" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
