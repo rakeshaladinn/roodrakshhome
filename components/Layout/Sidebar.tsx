@@ -193,12 +193,12 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                         }}
                       >
                         <span>{item.label}</span>
-                        <BiChevronRight
+                        {/* <BiChevronRight
                           size={20}
                           className={`transition-transform duration-500 ${
                             activeMenu === item.label ? "rotate-90" : ""
                           }`}
-                        />
+                        /> */}
                       </div>
                     ) : (
                       <Link
@@ -211,7 +211,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     )}
 
                     {/* First Level Dropdown */}
-                    {hasChildren && (
+                    {/* {hasChildren && (
                       <div
                         className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
                           activeMenu === item.label
@@ -245,7 +245,6 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                                 />
                               </div>
 
-                              {/* Second Level Dropdown */}
                               <div
                                 className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
                                   isLocationOpen
@@ -268,7 +267,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                           );
                         })}
                       </div>
-                    )}
+                    )} */}
                   </div>
                 );
               })}

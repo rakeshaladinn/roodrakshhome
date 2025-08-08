@@ -80,7 +80,7 @@ const Header = () => {
                 className="text-sm lg:text-base xl:text-lg  flex font-medium items-end gap-2  hover:text-primary hover:scale-125 transition-all duration-300"
               >
                 {item.label}
-                {item.children && <RiArrowDropDownLine className="text-2xl" />}
+                {/* {item.children && <RiArrowDropDownLine className="text-2xl" />} */}
               </Link>
 
               {/* {item?.children && activeDropdown === true && (
