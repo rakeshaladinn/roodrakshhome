@@ -3,9 +3,12 @@ import MainHeading from "@/components/UI/MainHeading";
 import Image from "next/image";
 import React from "react";
 
-const Amenities = ({ projectsdata }: any) => {
+const Amenities = ({ projectsdata, id }: any) => {
   return (
-    <div className=" border-t px-4 md:px-10 py-4 border-gray-200 bg-white rounded-md">
+    <div
+      id={id}
+      className=" border-t px-4 md:px-10 py-4 border-gray-200 bg-white rounded-md"
+    >
       <div className="my-10 text-center">
         <MainHeading
           Title={"Amenities"}

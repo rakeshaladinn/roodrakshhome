@@ -11,6 +11,7 @@ import EnquireNow from "./components/EnquireNow";
 import LayoutPlans from "./components/LayoutPlans";
 import { projects } from "@/constants/Data";
 import NotFound from "@/app/not-found";
+import ProjectTabs from "./components/ProjectTabs";
 
 const Page = async ({ params }: any) => {
   const { slug } = await params;
@@ -25,36 +26,38 @@ const Page = async ({ params }: any) => {
   }
   console.log("projectDataprojectData", projectData);
   return (
-    <div className="bg-gray-100 overflow-hidden">
+    <div className="bg-gray-100 overflow-hidden ">
       <Banner projectsdata={projectData} />
-      <div className="flex flex-col xl:flex-row gap-6 px-4 xl:px-8 py-10 relative">
-        <div className="w-full xl:w-[70%] flex flex-col gap-6 ">
-          <Overview projectsdata={projectData} />
+      <div className="absolute w-full bottom-0">
+        <ProjectTabs />
+      </div>
+
+      <div className="flex  flex-col xl:flex-row gap-6 px-4 xl:px-32 py-10 relative">
+        <div className="w-full flex flex-col gap-6 ">
+          <Overview id="overview" projectsdata={projectData} />
           {projectData?.amenities?.length > 1 && (
-            <Amenities projectsdata={projectData} />
+            <Amenities id="amenities" projectsdata={projectData} />
           )}
+
           {projectData?.location?.map_url && (
-            <Location projectsdata={projectData} />
+            <Location id="location" projectsdata={projectData} />
           )}
-          {projectData?.location?.address && (
-            <AddressBar projectsdata={projectData} />
-          )}
-          {projectData?.nearby_places?.length > 1 && (
-            <NearbyPlaces projectsdata={projectData} />
-          )}
+
           {projectData?.layout_plans?.length > 1 && (
-            <LayoutPlans projectsdata={projectData} />
+            <LayoutPlans id="layout-plans" projectsdata={projectData} />
           )}
+
           {projectData?.gallery?.length > 1 && (
-            <ImageGallery projectsdata={projectData} />
+            <ImageGallery id="image-gallery" projectsdata={projectData} />
           )}
+
+          <EnquireNow id="enquiry" projectsdata={projectData} />
         </div>
-        <div className="w-full xl:w-[30%] flex flex-col gap-6 ">
-          {/* {projectData?.status != "Completed" && ( */}
-          <EnquireNow projectsdata={projectData} />
-          {/* )} */}
-          {/* <HomeLoanCalculator /> */}
-        </div>
+        {/* <div className="w-full xl:w-[30%] flex flex-col gap-6 "> */}
+        {/* {projectData?.status != "Completed" && ( */}
+        {/* )} */}
+        {/* <HomeLoanCalculator />
+        </div> */}
       </div>
     </div>
   );

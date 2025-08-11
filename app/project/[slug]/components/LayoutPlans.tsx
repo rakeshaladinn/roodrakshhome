@@ -10,7 +10,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import MainHeading from "@/components/UI/MainHeading";
 import Slider from "@/components/UI/Slider";
 
-const LayoutPlans = ({ projectsdata }: any) => {
+const LayoutPlans = ({ projectsdata, id }: any) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
@@ -24,7 +24,7 @@ const LayoutPlans = ({ projectsdata }: any) => {
     setLightboxOpen(false);
   };
   return (
-    <div className="px-4 md:px-10  bg-white py-10 rounded-md ">
+    <div id={id} className="px-4 md:px-10  bg-white py-10 rounded-md ">
       <div className="text-center mb-8 sm:mb-12">
         <MainHeading
           Title={"Layout Plans"}

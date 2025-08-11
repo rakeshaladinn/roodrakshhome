@@ -42,7 +42,7 @@ const OverviewCard = ({
   );
 };
 
-const Overview = ({ projectsdata }: any) => {
+const Overview = ({ projectsdata, id }: any) => {
   const overview =
     projectsdata?.status == "Completed"
       ? [
@@ -94,7 +94,7 @@ const Overview = ({ projectsdata }: any) => {
           },
         ];
   return (
-    <div className="bg-white py-10 px-4 md:px-10  w-full rounded-md">
+    <div id={id} className="bg-white py-10 px-4 md:px-10  w-full rounded-md">
       <div className="mb-5 text-center">
         <MainHeading
           Title={"Overview"}

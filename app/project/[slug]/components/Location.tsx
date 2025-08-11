@@ -3,7 +3,7 @@
 import MainHeading from "@/components/UI/MainHeading";
 import { useState } from "react";
 
-const Location = ({ projectsdata }: any) => {
+const Location = ({ projectsdata, id }: any) => {
   const [activeTab, setActiveTab] = useState(1);
   console.log("data", projectsdata.location);
   const locationData = {
@@ -43,7 +43,10 @@ const Location = ({ projectsdata }: any) => {
   };
 
   return (
-    <div className="w-full px-4 md:px-10 rounded-md bg-white p-4 sm:p-6 lg:p-8">
+    <div
+      id={id}
+      className="w-full px-4 md:px-10 rounded-md bg-white p-4 sm:p-6 lg:p-8"
+    >
       <div className="mb-5 text-center">
         <MainHeading
           Title={"Location"}

@@ -4,7 +4,7 @@ import useAuth from "@/components/CustomHooks/useAuth";
 import MainHeading from "@/components/UI/MainHeading";
 import { FaDownload, FaEnvelope, FaPhone } from "react-icons/fa";
 
-const EnquireNow = ({ projectsdata }: any) => {
+const EnquireNow = ({ projectsdata, id }: any) => {
   const enquiryData = {
     contactInfo: {
       phone: {
@@ -29,7 +29,10 @@ const EnquireNow = ({ projectsdata }: any) => {
     name: projectsdata?.title,
   });
   return (
-    <div className="w-full  bg-white px-4 md:px-6 py-8 shadow-xl rounded-md">
+    <div
+      id={id}
+      className="w-full  bg-white px-4 md:px-6 py-8 shadow-xl rounded-md"
+    >
       <div className="text-center mb-6">
         <MainHeading
           Title={"Enquire Now"}
