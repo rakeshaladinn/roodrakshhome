@@ -6,11 +6,12 @@ import Button from "../Controls/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Slider from "../UI/Slider";
 import { IoIosPlay } from "react-icons/io";
+import { projects } from "@/constants/Data";
 
 const bannerData = [
   {
     id: 1,
-    src: Appassets.Hero1,
+    src: Appassets.Project_roodraksh_kundan,
     title: "Elevate Lifestyle",
     subtitle: "Luxury Meets Comfort",
     description:
@@ -18,7 +19,7 @@ const bannerData = [
   },
   {
     id: 1,
-    src: Appassets.Hero2,
+    src: Appassets.Project_roodraksh_pride,
     title: "top nouch",
     subtitle: "Living space",
     description:
@@ -26,7 +27,7 @@ const bannerData = [
   },
   {
     id: 1,
-    src: Appassets.Hero3,
+    src: Appassets.Project_roodraksh_sapphire,
     title: "Discover Your ",
     subtitle: "Flexiable Living House",
     description:
@@ -43,14 +44,14 @@ const MainBanner = () => {
         autoplay={true}
         // navigation
       >
-        {bannerData.map((item) => (
+        {projects.map((item: any) => (
           <div
             key={item.id}
             className="relative rounded-3xl w-full h-[65vh] sm:h-[70vh] md:h-[75vh] lg:h-[90vh] xl:h-[100vh] 2xl:h-[80vh] overflow-hidden"
           >
             {/* Background Image */}
             <Image
-              src={item.src}
+              src={item?.banner_image}
               alt="Banner image"
               width={1920}
               height={1080}
@@ -63,28 +64,19 @@ const MainBanner = () => {
             <div className="absolute inset-0 z-20 flex flex-col md:flex-row  justify-evenly md:justify-center items-center md:items-center text-white px-5 sm:px-10 md:px-16 lg:px-24">
               <div className="w-full   text-white flex flex-col  items-center md:items-start text-center md:text-left">
                 <h1 className="text-3xl capitalize md:text-4xl lg:text-5xl font-semibold leading-tight">
-                  {item.title} <br />
-                  {item.subtitle}
+                  {item?.title}
                 </h1>
                 <p className="mt-4 max-w-xl text-base md:text-lg text-white/90">
-                  {item.description}
+                  {item?.short_description}
                 </p>
 
                 <Button
-                  text="Explore Properties"
+                  text="Explore Property"
+                  link={`project/${item?.slug}`}
                   icon={<FaArrowRightLong />}
                   className="bg-primary hover:bg-black transition-all duration-500 text-white px-4 py-3 text-base  w-fit mt-6 clip-top-right"
                 />
               </div>
-              {/* <div className="w-full md:w-[40%] flex justify-center items-center mt-8 md:mt-0 relative">
-                <div className="absolute w-20 h-20 rounded-full bg-white opacity-70 animate-ping [animation-duration:1s]"></div>
-                <div className="absolute w-16 h-16 rounded-full bg-white opacity-50 animate-ping  [animation-duration:4s] delay-400"></div>
-                <div className="absolute w-20 h-20 rounded-full bg-white opacity-30 animate-ping [animation-duration:7s]"></div>
-
-                <div className="bg-white/20 relative z-10 text-white rounded-full p-6 cursor-pointer hover:scale-110 transition-transform">
-                  <IoIosPlay className="text-5xl" />
-                </div>
-              </div> */}
             </div>
           </div>
         ))}

@@ -18,10 +18,18 @@ import { FiPhoneCall } from "react-icons/fi";
 
 export default function Footer() {
   const servicesLinks = [
-    { label: "Strategy Services", href: "#" },
-    { label: "Business Advice", href: "#" },
-    { label: "Management", href: "#" },
-    { label: "Financial Advice", href: "#" },
+    {
+      label: "Roodraksh Pride",
+      url: "/project/roodraksh-pride",
+    },
+    {
+      label: "Roodraksh Sapphire",
+      url: "/project/roodraksh-sapphire",
+    },
+    {
+      label: "Roodraksh Kundan",
+      url: "/project/roodraksh-kundan",
+    },
   ];
 
   const scrollToTop = () => {
@@ -74,13 +82,13 @@ export default function Footer() {
             {/* Services */}
             <div className="flex flex-col items-star tw-full">
               <h3 className="text-lg md:text-xl font-semibold  text-start  mb-4">
-                Our Services
+                Our Projects
               </h3>
               <ul className="space-y-2 text-white">
                 {servicesLinks.map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={item.href}
+                      href={item?.url}
                       className="text-white hover:text-primary transition-colors text-base md:text-lg"
                     >
                       {item.label}

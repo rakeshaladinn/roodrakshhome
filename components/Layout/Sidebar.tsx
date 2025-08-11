@@ -23,88 +23,16 @@ export const navItems = [
     url: "/project",
     children: [
       {
-        label: "Guwahati",
-        url: "/project?location=guwahati",
-        nestchildren: [
-          {
-            label: "Commercial",
-            url: "/project?location=guwahati&type=commercial",
-            status: [
-              {
-                label: "Completed",
-                url: "/project?location=guwahati&type=commercial&status=completed",
-              },
-              {
-                label: "Ready to Move",
-                url: "/project?location=guwahati&type=commercial&status=ready-to-move-in",
-              },
-              {
-                label: "Ongoing",
-                url: "/project?location=guwahati&type=commercial&status=ongoing",
-              },
-            ],
-          },
-          {
-            label: "Residential",
-            url: "/project?location=guwahati&type=residential",
-            status: [
-              {
-                label: "Completed",
-                url: "/project?location=guwahati&type=residential&status=completed",
-              },
-              {
-                label: "Ready to Move",
-                url: "/project?location=guwahati&type=residential&status=ready-to-move-in",
-              },
-              {
-                label: "Ongoing",
-                url: "/project?location=guwahati&type=residential&status=ongoing",
-              },
-            ],
-          },
-        ],
+        label: "Roodraksh Pride",
+        url: "/project/roodraksh-pride",
       },
       {
-        label: "Agartala",
-        url: "/project?location=agartala",
-        nestchildren: [
-          {
-            label: "Commercial",
-            url: "/project?location=agartala&type=commercial",
-            status: [
-              {
-                label: "Completed",
-                url: "/project?location=agartala&type=commercial&status=completed",
-              },
-              {
-                label: "Ready to Move",
-                url: "/project?location=agartala&type=commercial&status=ready-to-move-in",
-              },
-              {
-                label: "Ongoing",
-                url: "/project?location=agartala&type=commercial&status=ongoing",
-              },
-            ],
-          },
-          {
-            label: "Residential",
-            url: "/project?location=agartala&type=residential",
-            status: [
-              {
-                label: "Completed",
-                url: "/project?location=agartala&type=residential&status=completed",
-              },
-              {
-                label: "Ready to Move",
-                url: "/project?location=agartala&type=residential&status=ready-to-move-in",
-              },
-              {
-                label: "Ongoing",
-                url: "/project?location=agartala&type=residential&status=ongoing",
-              },
-            ],
-          },
-        ],
+        label: "Roodraksh Sapphire",
+        url: "/project/roodraksh-sapphire",
+      },
+      {
+        label: "Roodraksh Kundan",
+        url: "/project/roodraksh-kundan",
       },
     ],
   },
@@ -324,7 +252,6 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 </div>
                 <div className="hidden lg:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors">
                   <p className="text-lg font-medium">Agartala:</p>
-                  <CiPhone size={20} />
                   <p className="text-black/80 text-start">
                     Dhaleswar, Near Prachya Bharati School North Side Shiv
                     Mandir Agartala - 799007, West Tripura

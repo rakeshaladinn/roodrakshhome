@@ -32,10 +32,10 @@ export default function Button({
         <Link
           onClick={() => setLinkLoading(true)}
           href={link}
-          className={` whitespace-nowrap font-bold hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out p-2 cursor-pointer flex items-center justify-center gap-2 disabled:cursor-not-allowed ${className}`}
+          className={` whitespace-nowrap  hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out p-2 cursor-pointer flex items-center justify-center gap-2 disabled:cursor-not-allowed ${className}`}
         >
-          {icon}
           {text}
+          {icon}
           {(loading || linkLoading) && <p className={`${loaderType} ml-2`}></p>}
         </Link>
       ) : (
