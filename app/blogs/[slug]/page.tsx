@@ -1,7 +1,6 @@
 "use server";
 import { BlogsData } from "@/constants/Data";
 import LeftBlog from "./components/LeftBlog";
-import RightBlog from "./components/RightBlog";
 import CommanBanner from "@/components/Comman/CommanBanner";
 
 const page = async ({ params }: any) => {

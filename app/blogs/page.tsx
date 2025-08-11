@@ -1,7 +1,6 @@
 "use server";
 import CommanBanner from "@/components/Comman/CommanBanner";
 import LatestBlog from "./[slug]/components/LatestBlog";
-import TopRated from "./[slug]/components/TopRated";
 import Blogcard from "./components/Blogcard";
 import { BlogsData } from "@/constants/Data";
 export async function generateMetadata() {
