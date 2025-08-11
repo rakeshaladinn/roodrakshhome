@@ -1,8 +1,8 @@
 "use client";
-import MainHeading from "@/Components/Common/MainHeading";
-import TextBox from "@/Components/Controls/TextBox";
-import useAuth from "@/Components/CustomHooks/useAuth";
 
+import TextBox from "@/components/Controls/TextBox";
+import useAuth from "@/components/CustomHooks/useAuth";
+import MainHeading from "@/components/UI/MainHeading";
 import * as Yup from "yup";
 
 const validationSchema = Yup.object({
