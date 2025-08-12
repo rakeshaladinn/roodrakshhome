@@ -54,13 +54,13 @@ const Testimonials = () => {
               Icon={<FaHome />}
               Description="The journey of our home buyers reflect our dedication to excellence, honesty, and delivering complete customer satisfaction.t"
             />
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <Button
                 text="View All Review"
                 icon={<FaHome />}
                 className="bg-black hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
               />
-            </div>
+            </div> */}
           </div>
           <div className="w-full lg:w-1/2 xl:w-[50%] flex flex-col gap-10  bg-[url('/testimonals/map-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
             <Slider
