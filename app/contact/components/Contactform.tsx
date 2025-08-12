@@ -132,14 +132,14 @@ const Contactform = () => {
           The Right Property Is Just One Enquiry Away. Let’s Make It Yours.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-12 items-start ">
-        <div className=" md:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6">
+      <div className="flex flex-col lg:flex-row gap-12 items-start ">
+        <div className=" w-full lg:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6">
           <Location />
         </div>
         {/* Form Section */}
         <form
           onSubmit={formik.handleSubmit}
-          className="w-full md:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6"
+          className="w-full lg:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <InputField
