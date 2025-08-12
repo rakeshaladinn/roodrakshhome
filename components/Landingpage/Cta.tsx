@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Mainheading from "../Comman/Mainheading";
 import { FaHome } from "react-icons/fa";
 import Image from "next/image";
 import { Appassets } from "@/constants/Appassets";
 import Button from "../Controls/Button";
+import Modal from "../Comman/Modal";
+import Callmodal from "../Comman/Callmodal";
 
 const Cta = () => {
+  const [open, setopen] = useState(false);
   return (
     <section className="bg-[#292b2c]   text-white relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch z-10 relative">
@@ -22,6 +25,7 @@ const Cta = () => {
             assist you in discovering the right property for you.
           </p>
           <Button
+            onClick={() => setopen(true)}
             text=" Call Now"
             icon={<FaHome />}
             className="bg-transparent text-base w-fit text-white border border-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-white hover:text-black transition duration-300"
@@ -38,6 +42,9 @@ const Cta = () => {
           />
         </div>
       </div>
+      <Modal isOpen={open} onClose={() => setopen(false)}>
+        <Callmodal />
+      </Modal>
     </section>
   );
 };
