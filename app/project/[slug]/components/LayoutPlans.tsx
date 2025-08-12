@@ -28,7 +28,6 @@ const LayoutPlans = ({ projectsdata, id }: any) => {
       <div className="text-center mb-8 sm:mb-12">
         <MainHeading
           Title={"Layout Plans"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize lg:text-3xl mb-2"

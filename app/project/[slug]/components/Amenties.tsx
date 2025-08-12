@@ -12,7 +12,6 @@ const Amenities = ({ projectsdata, id }: any) => {
       <div className="my-10 text-center">
         <MainHeading
           Title={"Amenities"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={"text-center justify-center capitalize lg:text-3xl"}
         />

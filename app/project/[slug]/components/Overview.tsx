@@ -98,7 +98,6 @@ const Overview = ({ projectsdata, id }: any) => {
       <div className="mb-5 text-center">
         <MainHeading
           Title={"Overview"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize text-2xl lg:text-3xl"

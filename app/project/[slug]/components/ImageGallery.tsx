@@ -31,7 +31,6 @@ export default function ImageGallery({ projectsdata, id }: any) {
       <div className="text-center mb-8 sm:mb-12">
         <MainHeading
           Title={"Image Gallery"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize lg:text-3xl mb-2"

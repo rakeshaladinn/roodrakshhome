@@ -20,12 +20,12 @@ export default function ProjectTabs() {
     }
   };
   return (
-    <div className="bg-white shadow-lg px-6 py-4 flex flex-wrap justify-center gap-10">
+    <div className="bg-white shadow-lg px-2 py-4 flex flex-wrap justify-center gap-4 lg:gap-7  xl:gap-12">
       {tabs.map((tab, index) => (
         <button
           key={index}
           onClick={() => handleScroll(tab.id)}
-          className="text-[#1d3557] text-sm font-semibold tracking-widest hover:text-primary cursor-pointer transition-colors duration-200"
+          className="text-black text-sm font-semibold tracking-widest hover:text-primary cursor-pointer transition-colors duration-200"
         >
           {tab.label}
         </button>

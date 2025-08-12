@@ -28,10 +28,6 @@ const Page = async ({ params }: any) => {
   return (
     <div className="bg-gray-100 overflow-hidden ">
       <Banner projectsdata={projectData} />
-      <div className="absolute w-full bottom-0">
-        <ProjectTabs />
-      </div>
-
       <div className="flex  flex-col xl:flex-row gap-6 px-4 xl:px-32 py-10 relative">
         <div className="w-full flex flex-col gap-6 ">
           <Overview id="overview" projectsdata={projectData} />

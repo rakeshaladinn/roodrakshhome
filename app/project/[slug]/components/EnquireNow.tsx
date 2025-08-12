@@ -36,7 +36,6 @@ const EnquireNow = ({ projectsdata, id }: any) => {
       <div className="text-center mb-6">
         <MainHeading
           Title={"Enquire Now"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize lg:text-2xl 2xl:text-3xl"
@@ -60,12 +59,14 @@ const EnquireNow = ({ projectsdata, id }: any) => {
             mainStyle={"w-full"}
           />
         ))}
-        <button
-          type="submit"
-          className="w-full cursor-pointer bg-[#ed2f59] hover:bg-[#ed2f59]/90 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {EnquiryFormik?.isSubmitting ? "Sending...." : "Send Message"}
-        </button>
+        <div className="text-center">
+          <button
+            type="submit"
+            className="w-fit cursor-pointer  bg-[#ed2f59] hover:bg-[#ed2f59]/90 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {EnquiryFormik?.isSubmitting ? "Sending...." : "Send Message"}
+          </button>
+        </div>
       </form>
       <div className="mt-12 space-y-6">
         <div className="flex items-center space-x-4">

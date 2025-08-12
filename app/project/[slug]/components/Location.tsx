@@ -50,7 +50,6 @@ const Location = ({ projectsdata, id }: any) => {
       <div className="mb-5 text-center">
         <MainHeading
           Title={"Location"}
-          Lines={true}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize lg:text-3xl mb-2"
