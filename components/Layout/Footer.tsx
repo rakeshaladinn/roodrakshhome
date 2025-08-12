@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="relative bg-[url('/banners/footer.png')] text-white  bg-cover bg-center bg-no-repeat">
       <div className="px-4 sm:px-6 lg:px-8 pt-16 bg-[#0c151c]/20">
         {/* Top section */}
-        <div className="flex flex-col lg:flex-row justify-between gap-4 md:gap-12 pb-6">
+        <div className="flex flex-col lg:flex-row justify-between gap-4 md:gap-12 pb-6 xl:pb-0">
           {/* Logo and newsletter */}
           <div className="w-full lg:w-[40%] flex flex-col items-start md:items-center lg:items-start text-center lg:text-left">
             <Image
@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
 
             {/* Services */}
-            <div className="flex flex-col items-star tw-full">
+            <div className="flex flex-col items-star w-full">
               <h3 className="text-lg md:text-xl font-semibold  text-start  mb-4">
                 Our Projects
               </h3>

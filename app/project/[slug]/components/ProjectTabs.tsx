@@ -13,7 +13,7 @@ export default function ProjectTabs() {
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      const yOffset = -120; // adjust to match your tab/header height
+      const yOffset = -100; // adjust to match your tab/header height
       const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
 
       window.scrollTo({ top: y, behavior: "smooth" });

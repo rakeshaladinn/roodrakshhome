@@ -19,7 +19,6 @@ export default function Home() {
       <Whoweare />
       <Cta />
       <Testimonals />
-
       {/* <BlogNewsSection /> */}
     </div>
   );

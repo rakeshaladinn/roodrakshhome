@@ -163,6 +163,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                                 }
                               >
                                 <Link
+                                  onClick={() => setIsOpen(false)}
                                   href={location?.url}
                                   className="text-black"
                                 >
