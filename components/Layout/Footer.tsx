@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="relative bg-[url('/banners/footer.png')] text-white  bg-cover bg-center bg-no-repeat">
       <div className="px-4 sm:px-6 lg:px-8 pt-16 bg-[#0c151c]/20">
         {/* Top section */}
-        <div className="flex flex-col lg:flex-row justify-between gap-12 pb-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-4 md:gap-12 pb-6">
           {/* Logo and newsletter */}
           <div className="w-full lg:w-[40%] flex flex-col items-start md:items-center lg:items-start text-center lg:text-left">
             <Image
@@ -105,7 +105,7 @@ export default function Footer() {
               <ul className="space-y-3 text-white">
                 <a
                   href="mailto: info@roodraksh.co.in"
-                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                  className="flex items-center gap-2 cursor-pointer text-white transition-colors"
                 >
                   <FaEnvelope className="w-4 h-4 text-white" />
                   <span className="text-base hover:text-primary transition-all duration-300">
@@ -114,7 +114,7 @@ export default function Footer() {
                 </a>
                 <a
                   href=" +91-9164-67-9164"
-                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                  className="flex items-center gap-2 cursor-pointer text-white transition-colors"
                 >
                   <FiPhoneCall size={20} />
                   <span className="text-base hover:text-primary transition-all duration-300">
@@ -123,7 +123,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="+91-9057-64-4644"
-                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                  className="flex items-center gap-2 cursor-pointer text-white transition-colors"
                 >
                   <FiPhoneCall size={20} />
                   <span className="text-base hover:text-primary transition-all duration-300">

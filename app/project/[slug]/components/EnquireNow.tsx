@@ -113,7 +113,7 @@ const EnquireNow = ({ projectsdata, id }: any) => {
             <a
               download
               href={`${projectsdata?.brochure_url}`}
-              className="w-full flex items-center justify-center space-x-2 bg-white border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-md transition-all duration-200 focus:outline-none  hover:-translate-y-2 cursor-pointer"
+              className="w-fit flex items-center justify-center space-x-2 bg-white border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-md transition-all duration-200 focus:outline-none  hover:-translate-y-2 cursor-pointer"
             >
               <FaDownload className="text-lg" />
               <span>{enquiryData.downloadButton.text}</span>
