@@ -71,9 +71,8 @@ export default function FeaturedProperty() {
               Description=""
             />
             <p className="text-base md:text-lg text-white">
-              We are a real estate firm with over 20 years of expertise, and our
-              main goal is to provide amazing locations to our partners and
-              clients.
+              All our projects carry a promise of quality, trust, and lasting
+              value which we are proud to offer to our customers.
             </p>
           </div>
           <Button

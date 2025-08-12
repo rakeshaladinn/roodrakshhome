@@ -121,12 +121,12 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                         }}
                       >
                         <span>{item.label}</span>
-                        {/* <BiChevronRight
+                        <BiChevronRight
                           size={20}
                           className={`transition-transform duration-500 ${
                             activeMenu === item.label ? "rotate-90" : ""
                           }`}
-                        /> */}
+                        />
                       </div>
                     ) : (
                       <Link
@@ -139,7 +139,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     )}
 
                     {/* First Level Dropdown */}
-                    {/* {hasChildren && (
+                    {hasChildren && (
                       <div
                         className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
                           activeMenu === item.label
@@ -153,7 +153,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                           return (
                             <div key={location.label}>
                               <div
-                                className="flex gap-10 text-black text-lg items-center cursor-pointer hover:text-primary transition-colors"
+                                className="flex gap-10 mt-4 text-black text-lg items-center cursor-pointer hover:text-primary transition-colors"
                                 onClick={() =>
                                   setActiveSubMenu((prev) =>
                                     prev === location.label
@@ -162,18 +162,15 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                                   )
                                 }
                               >
-                                <span className="text-black">
+                                <Link
+                                  href={location?.url}
+                                  className="text-black"
+                                >
                                   {location.label}
-                                </span>
-                                <BiChevronRight
-                                  size={18}
-                                  className={`transition-transform duration-500 ${
-                                    isLocationOpen ? "rotate-90" : ""
-                                  }`}
-                                />
+                                </Link>
                               </div>
 
-                              <div
+                              {/* <div
                                 className={`ml-4 transition-all duration-500 ease-in-out overflow-hidden ${
                                   isLocationOpen
                                     ? "max-h-[500px] opacity-100 mt-1"
@@ -190,12 +187,12 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                                     {type.label}
                                   </Link>
                                 ))}
-                              </div>
+                              </div> */}
                             </div>
                           );
                         })}
                       </div>
-                    )} */}
+                    )}
                   </div>
                 );
               })}

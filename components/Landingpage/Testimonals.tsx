@@ -5,6 +5,7 @@ import Image from "next/image";
 import Mainheading from "../Comman/Mainheading";
 import Button from "../Controls/Button";
 import Slider from "../UI/Slider";
+import { TestimonialData } from "@/constants/Testimonial";
 
 const testimonials = [
   {
@@ -34,11 +35,11 @@ const testimonials = [
 ];
 
 const avatarGroups = [
-  ["/testimonals/client-03.png"],
-  ["/testimonals/client-04.png"],
-  ["/testimonals/client-03.png"],
-  ["/testimonals/client-04.png"],
-  ["/testimonals/client-03.png"],
+  ["/testimonial/dr_arunabha_debnath.jpeg"],
+  ["/testimonial/constantine_thma.jpeg"],
+  ["/testimonial/subhradeep_aich.jpeg"],
+  ["/testimonial/soumita.jpeg"],
+  ["/testimonial/dr_arunabha_debnath.jpeg"],
 ];
 
 const Testimonials = () => {
@@ -46,12 +47,12 @@ const Testimonials = () => {
     <section className="px-5 md:px-16 lg:px-20 py-14 md:py-20 xl:py-24 ">
       <div className="">
         <div className="flex flex-col lg:flex-row justify-between gap-10 ">
-          <div className="w-full lg:w-1/2  xl:w-[47%] bg-[url('/testimonals/left-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
+          <div className="w-full lg:w-1/2  xl:w-[50%] bg-[url('/testimonals/left-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
             <Mainheading
               SubTitle="Happy Customers "
               Title="Residents Who Placed Their Trust in Us"
               Icon={<FaHome />}
-              Description="The journey of our home buyers reflect our dedication to excellence, honesty, and delivering complete customer satisfaction."
+              Description="The journey of our home buyers reflect our dedication to excellence, honesty, and delivering complete customer satisfaction.t"
             />
             <div className="mt-6">
               <Button
@@ -61,31 +62,31 @@ const Testimonials = () => {
               />
             </div>
           </div>
-          <div className="w-full lg:w-1/2 xl:w-[47%] flex flex-col gap-10  bg-[url('/testimonals/map-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
+          <div className="w-full lg:w-1/2 xl:w-[50%] flex flex-col gap-10  bg-[url('/testimonals/map-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
             <Slider
               breakpoints={{ lg: 1, md: 1 }}
               navigatorDots={false}
               autoplay
               autoplayDelay={3000}
             >
-              {testimonials.map((item, index) => (
+              {TestimonialData.map((item, index) => (
                 <div
                   key={index}
-                  className=" border border-primary mx-2 rounded-xl  h-72 lg:h-64 p-8 shadow-md relative "
+                  className=" border border-primary mx-2 rounded-xl  h-76 2xl:h-64  p-3 shadow-md relative "
                 >
-                  <div className="flex justify-center text-yellow-400 text-xl mb-6">
+                  <div className="flex justify-center text-yellow-400 text-xl mb-3">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
-                  <p className="text-center text-lg text-gray-700 mb-6">
-                    {item.message}
+                  <p className="text-center  text-sm md:text-lg text-gray-700 mb-3">
+                    {item.description}
                   </p>
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-[#0C1F3F]">
                       {item.name}
                     </h3>
-                    <p className="text-sm text-gray-600">{item.role}</p>
+                    <p className="text-sm text-gray-600">{item.position}</p>
                   </div>
                 </div>
               ))}
@@ -106,7 +107,7 @@ const Testimonials = () => {
                         alt={`user-${idx}`}
                         width={1920}
                         height={1080}
-                        className="rounded-full h-16 w-16 border-2 border-white shadow-md"
+                        className="rounded-full object-cover h-20 w-20  border-2 border-white shadow-md"
                       />
                     ))}
                   </div>
