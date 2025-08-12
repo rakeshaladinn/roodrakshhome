@@ -104,7 +104,7 @@ const Header = () => {
                       {item?.children?.map((location, i) => (
                         <div
                           key={i}
-                          className="w-48 space-y-4   h-full text-start  "
+                          className="w-52 space-y-4   h-full text-start  "
                         >
                           <div className="  text-black my-2">
                             <Link
