@@ -1,10 +1,12 @@
 "use client";
 import { Appassets } from "@/constants/Appassets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowRight, FaPhoneAlt, FaHome } from "react-icons/fa";
 import Button from "../Controls/Button";
 import Mainheading from "../Comman/Mainheading";
+import Modal from "../Comman/Modal";
+import Callmodal from "../Comman/Callmodal";
 
 const features = [
   "Timely handover through precise planning ",
@@ -13,6 +15,7 @@ const features = [
 ];
 
 const Whoweare = () => {
+  const [open, setopen] = useState(false);
   return (
     <div className="bg-[#FDF9F8]  py-14 md:py-20 xl:py-24  px-5 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 xl:gap-5 2xl:gap-16 relative overflow-hidden bg-[url('/whoweare/right-shape.png')] bg-no-repeat bg-right-bottom">
       <div className="relative w-full  lg:w-[52%] 2xl:w-1/2 overflow-hidden">
@@ -82,20 +85,22 @@ const Whoweare = () => {
             icon={<FaHome />}
             className="bg-black w-fit hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
           />
-          <a
-            href="tel:+91-9164-67-9164"
-            className="flex items-center gap-3 group transition-all duration-500"
+          <div
+            onClick={() => setopen(true)}
+            className="flex items-center gap-3  cursor-pointer group transition-all duration-500"
           >
-            <div className="bg-black text-white group-hover:bg-primary transition-all duration-500 p-4 rounded-full">
+            <div className="bg-black c text-white group-hover:bg-primary transition-all duration-500 p-4 rounded-full">
               <FaPhoneAlt />
             </div>
             <div className="text-black transition-all duration-500 group-hover:text-primary">
-              <p className="text-sm font-medium">Call Us 24/7</p>
-              <h4 className="text-lg font-bold">+91-9164-67-9164</h4>
+              <p className="text-base md:text-lg font-medium">Call Us 24/7</p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
+      <Modal isOpen={open} onClose={() => setopen(false)}>
+        <Callmodal />
+      </Modal>
     </div>
   );
 };

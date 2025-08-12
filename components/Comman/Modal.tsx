@@ -53,7 +53,7 @@ const Modal: React.FC<ModalProps> = ({
               </div>
               {onClose && (
                 <button
-                  className="text-red-500 cursor-pointer hover:text-red-600 absolute right-4 top-4"
+                  className="text-red-500 cursor-pointer hover:text-red-600 absolute right-4 top-2"
                   onClick={onClose}
                 >
                   <RxCross1 size={20} />

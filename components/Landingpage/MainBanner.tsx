@@ -7,6 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Slider from "../UI/Slider";
 import { IoIosPlay } from "react-icons/io";
 import { projects } from "@/constants/Data";
+import Modalform from "../Comman/Modalform";
 
 const bannerData = [
   {
@@ -81,6 +82,9 @@ const MainBanner = () => {
           </div>
         ))}
       </Slider>
+      <div className="w-1/3 mx-10 absolute right-0 top-[12%] xl:block hidden">
+        <Modalform title={"Enquire Now"} />
+      </div>
     </div>
   );
 };

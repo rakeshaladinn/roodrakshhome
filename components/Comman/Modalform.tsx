@@ -3,10 +3,13 @@
 import TextBox from "../Controls/TextBox";
 import useAuth from "../CustomHooks/useAuth";
 
-const Modalform = ({ name }: { name?: string } = {}) => {
+const Modalform = ({ name, title }: { name?: string; title?: any } = {}) => {
   const { EnquiryFormik, EnquiryFormaData } = useAuth({ name });
   return (
-    <div className="bg-white p-2 w-full">
+    <div className="bg-white p-2 w-full rounded-md">
+      <div className="truncate text-center text-xl font-semibold w-full mb-5 mt-2">
+        {title}
+      </div>
       <form
         onSubmit={EnquiryFormik?.handleSubmit}
         className=" flex  flex-col gap-y-4 w-full"
