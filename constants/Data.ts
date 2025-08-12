@@ -276,7 +276,7 @@ export const projects = [
     short_description:
       "Roodraksh Kundan offers you a serene living experience in a well-planned home that values both your privacy and the little joys of daily life.",
     description:
-      " offers premium living in North East India with homes pre-inspected by MACJ in collaboration with A Buyer’s Choice Home Inspections, USA. The project is built with earthquake-resistant RCC structure, gated security, fire safety, and elegant interiors. It offers a peaceful, well-designed space where comfort, privacy, and quality come together for modern families.",
+      " brings premium living to North East India, with every home pre-inspected by MACJ in partnership with A Buyer’s Choice Home Inspections, USA. Featuring an earthquake-resistant RCC framework, gated security, fire safety measures, and stylish interiors, it offers a serene and thoughtfully crafted space where comfort, privacy, and quality blend seamlessly for today’s families.",
     amenities: amenities.filter((item) =>
       [3, 9, 16, 17, 18, 19, 20, 21, 22, 23, 24].includes(item.id)
     ),
@@ -478,7 +478,7 @@ export const projects = [
     short_description:
       "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
     description:
-      " a new address of comfort and convenience awaits you in Agartala. Landscaped gardens, recreational areas, and essential amenities bring community and relaxation together. Strategically located for effortless access to city essentials, the project ensures that everything you need is always close by. It’s where modern aspirations meet practical living.",
+      "introduces a new destination of comfort and ease in Agartala. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
     amenities: [],
     location: {
       address:
@@ -515,7 +515,7 @@ export const projects = [
     short_description:
       "Roodraksh Sapphire welcomes you to a haven of tranquillity, away from the city’s hustle, where scenic views and calm surroundings help you unwind.",
     description:
-      "offers more than just a home where peace, joy, and connection thrive. Whether you're spending joyful moments with your family or engaging with a vibrant neighbourhood, every detail nurtures your happiness and well-being. Here you will experience a lifestyle that fosters true belonging and makes every day feel special.",
+      "is more than a residence. It’s a place where happiness, and togetherness flourish. From cherished family moments to lively interactions within a welcoming community, every aspect is designed to enhance your comfort and joy. Here, you’ll enjoy a way of life that creates a genuine sense of belonging and makes each day feel extraordinary.",
     amenities: amenities.filter((item) =>
       [15, 9, 3, 8, 5, 6, 7, 12].includes(item.id)
     ),

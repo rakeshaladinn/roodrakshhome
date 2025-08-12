@@ -38,7 +38,7 @@ const EnquireNow = ({ projectsdata, id }: any) => {
           Title={"Enquire Now"}
           BlackColor={true}
           ClassNameTitle={
-            "text-center justify-center capitalize lg:text-2xl 2xl:text-3xl"
+            "text-center justify-center capitalize lg:text-3xl mb-2"
           }
         />
       </div>
