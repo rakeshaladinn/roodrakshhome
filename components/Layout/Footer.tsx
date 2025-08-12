@@ -52,18 +52,18 @@ export default function Footer() {
               className="w-auto h-24 object-contain mb-6"
             />
             <p className=" text-base 2xl:text-lg  text-white text-start md:text-center lg:text-start tracking-wide max-w-lg mb-6">
-              Discover why our residents love calling us home from breathtaking
-              views and luxury finishes to unmatched service and community
-              living, their stories reflect
+              From dynamic residential spaces to meticulously planned commercial
+              hubs, Roodraksh Group meets the changing demands of modern cities
+              with an emphasis on lasting value and sustainable development.
             </p>
           </div>
 
           {/* Navigation + Contacts + Services */}
-          <div className="w-full justify-center lg:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="w-full justify-center lg:w-[60%] grid grid-cols-1 md:grid-cols-3  gap-8 xl:gap-2">
             {/* Useful Links */}
             <div className="flex flex-col items-start  w-full ">
               <h3 className="text-lg md:text-xl font-semibold text-center   mb-4">
-                Useful Link
+                Useful Links
               </h3>
               <ul className="space-y-2 text-start text-white">
                 {navItems.map((item: any, index: number) => (
@@ -103,15 +103,6 @@ export default function Footer() {
                 Get In Touch
               </h3>
               <ul className="space-y-3 text-white">
-                <li className="flex items-start gap-2">
-                  <div>
-                    <FaMapMarkerAlt className="w-4 h-4 text-white mt-1" />
-                  </div>
-                  <span className="text-base md:text-lg text-start">
-                    Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
-                    Guwahati - 781003
-                  </span>
-                </li>
                 <a
                   href="mailto: info@roodraksh.co.in"
                   className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
@@ -122,12 +113,21 @@ export default function Footer() {
                   </span>
                 </a>
                 <a
-                  href="tel:+91-9057644644"
+                  href=" +91-9164-67-9164"
                   className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
                 >
                   <FiPhoneCall size={20} />
                   <span className="text-base hover:text-primary transition-all duration-300">
-                    +91-9057-64-4644
+                    +91-9164-67-9164 (Guwahati)
+                  </span>
+                </a>
+                <a
+                  href="+91-9057-64-4644"
+                  className="hidden lg:flex items-center gap-2 cursor-pointer text-white transition-colors"
+                >
+                  <FiPhoneCall size={20} />
+                  <span className="text-base hover:text-primary transition-all duration-300">
+                    +91-9057-64-4644 (Agartala)
                   </span>
                 </a>
               </ul>

@@ -48,10 +48,10 @@ const Testimonials = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-10 ">
           <div className="w-full lg:w-1/2  xl:w-[47%] bg-[url('/testimonals/left-shape.png')] bg-left-bottom bg-no-repeat bg-contain">
             <Mainheading
-              SubTitle="Testimonial"
-              Title="What Our Residents Say"
+              SubTitle="Happy Customers "
+              Title="Residents Who Placed Their Trust in Us"
               Icon={<FaHome />}
-              Description="Discover why our residents love calling us home—from breathtaking views and luxury finishes to unmatched service and community living, their stories reflect"
+              Description="The journey of our home buyers reflect our dedication to excellence, honesty, and delivering complete customer satisfaction."
             />
             <div className="mt-6">
               <Button

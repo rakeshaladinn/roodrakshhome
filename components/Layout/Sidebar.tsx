@@ -36,7 +36,7 @@ export const navItems = [
       },
     ],
   },
-  { label: "Blogs", url: "/blogs" },
+  // { label: "Blogs", url: "/blogs" },
   { label: "Contact Us", url: "/contact" },
 ];
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {

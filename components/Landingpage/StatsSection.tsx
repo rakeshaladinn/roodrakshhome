@@ -2,10 +2,10 @@
 import React from "react";
 
 const stats = [
-  { number: "850+", label: "Elegant Apartments" },
-  { number: "950+", label: "Luxury Houses" },
-  { number: "18K+", label: "Satisfied Guests" },
-  { number: "2K+", label: "Happy Owners" },
+  { number: "1200+", label: "Homes Delivered " },
+  { number: "20+", label: "Years of Experience " },
+  { number: "15+", label: "Lakh Sq.Ft. Constructed" },
+  { number: "3+", label: "Lakh Sq. Ft. Under Construction " },
 ];
 
 const StatsSection = () => {

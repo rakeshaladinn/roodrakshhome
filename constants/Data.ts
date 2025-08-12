@@ -256,6 +256,245 @@ export const projects = [
   //   layout_plans: [],
   // },
   {
+    id: 10,
+    title: "Roodraksh Kundan",
+    slug: "roodraksh-kundan",
+    city: "Guwahati",
+    type: "Residential / Commercial",
+    status: "Ready To Move In",
+    feature_image: "/projects/roodraksh_kundan/feature.jpg",
+    banner_image: "/projects/roodraksh_kundan/banner.jpg",
+    brochure_url: "/brochure/brochure-roodraksh-kundan-1748413988.pdf",
+    more_details: {
+      area: "-",
+      rera_no: "RERAA KM 267 OF 2021-2022",
+      total_spaces: "318",
+      total_towers: "-",
+      flat_sizes: "624 Sq.Ft. - 1331 Sq.Ft.",
+      bhk: "2 & 3 BHK",
+    },
+    short_description:
+      "Roodraksh Kundan offers you a serene living experience in a well-planned home that values both your privacy and the little joys of daily life.",
+    description:
+      " offers premium living in North East India with homes pre-inspected by MACJ in collaboration with A Buyer’s Choice Home Inspections, USA. The project is built with earthquake-resistant RCC structure, gated security, fire safety, and elegant interiors. It offers a peaceful, well-designed space where comfort, privacy, and quality come together for modern families.",
+    amenities: amenities.filter((item) =>
+      [3, 9, 16, 17, 18, 19, 20, 21, 22, 23, 24].includes(item.id)
+    ),
+
+    location: {
+      address: "SATGAON MAIN ROAD , BESIDE SFS SCHOOL, GUWAHATI - 781170",
+      map_url:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.856014913118!2d91.831759!3d26.166474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a592bf05573a1%3A0x7cd7fa416bd6b80c!2sRoodraksh%20Kundan%20-%202%20and%203%20BHK%20Flats%20and%20Apartments%20For%20Sale%20in%20Guwahati!5e0!3m2!1sen!2sin!4v1750316014703!5m2!1sen!2sin",
+      satellite_view:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6807.493347508563!2d91.831759!3d26.166474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a592bf05573a1%3A0x7cd7fa416bd6b80c!2sRoodraksh%20Kundan%20-%202%20and%203%20BHK%20Flats%20and%20Apartments%20For%20Sale%20in%20Guwahati!5e1!3m2!1sen!2sin!4v1750230932672!5m2!1sen!2sin",
+      live_view:
+        "https://www.google.com/maps/embed?pb=!4v1750230976771!6m8!1m7!1sdXBiMJ9I5_HW3ogKX_Px9w!2m2!1d26.1661463308015!2d91.83121175649713!3f56.59!4f0!5f0.5970117501821992",
+    },
+    nearby_places: [
+      {
+        title: "Hospitals",
+        places: [
+          {
+            title: "Pratiksha Hospital",
+            distance: "2.9 km",
+          },
+        ],
+      },
+      {
+        title: "Transport",
+        places: [
+          {
+            title: "Narengi Railway Station",
+            distance: "2 km",
+          },
+        ],
+      },
+      {
+        title: "Market",
+        places: [
+          {
+            title: "Market",
+            distance: "500 mtr",
+          },
+          {
+            title: "Ganeshguri (G S Road)",
+            distance: "8.5 km",
+          },
+        ],
+      },
+      {
+        title: "Schools",
+        places: [
+          {
+            title: "St Francis De Sales Higher Secondary School",
+            distance: "Next Building",
+          },
+          {
+            title: "Army Public School, Narengi",
+            distance: "3.7 km",
+          },
+        ],
+      },
+      {
+        title: "University",
+        places: [
+          {
+            title: "Narangi Anchalik Mahavidyalaya",
+            distance: "800 mtr",
+          },
+        ],
+      },
+      {
+        title: "Zoo",
+        places: [
+          {
+            title: "zoo",
+            distance: "7.2 km ",
+          },
+        ],
+      },
+      {
+        title: "Museum",
+        places: [
+          {
+            title: "Srimanta sankaradava kalashetra",
+            distance: "5.4 km ",
+          },
+        ],
+      },
+      {
+        title: "others",
+        places: [
+          {
+            title: "Assam Secretariat",
+            distance: "6.5 km ",
+          },
+        ],
+      },
+    ],
+    layout_plans: [
+      {
+        title: "Type 1 & 2",
+        image: "/projects/roodraksh_kundan/layout01.webp",
+      },
+      {
+        title: "Type 3-A & 3-B",
+        image: "/projects/roodraksh_kundan/layout02.webp",
+      },
+      {
+        title: "Typical Floor Plan - Block 4",
+        image: "/projects/roodraksh_kundan/layout03.webp",
+      },
+      {
+        title: "Typical Floor Plan 2 - Block C & E",
+        image: "/projects/roodraksh_kundan/layout04.webp",
+      },
+      {
+        title: "Typical Floor Plan 3 - BLOCK D",
+        image: "/projects/roodraksh_kundan/layout05.webp",
+      },
+    ],
+    gallery: [
+      {
+        title: "01",
+        image: "/projects/roodraksh_kundan/gallery01.jpg",
+      },
+      {
+        title: "02",
+        image: "/projects/roodraksh_kundan/gallery02.jpg",
+      },
+      {
+        title: "03",
+        image: "/projects/roodraksh_kundan/gallery03.jpg",
+      },
+      {
+        title: "04",
+        image: "/projects/roodraksh_kundan/gallery04.jpg",
+      },
+      {
+        title: "05",
+        image: "/projects/roodraksh_kundan/gallery05.jpg",
+      },
+      {
+        title: "06",
+        image: "/projects/roodraksh_kundan/gallery06.jpg",
+      },
+      {
+        title: "07",
+        image: "/projects/roodraksh_kundan/gallery07.jpg",
+      },
+      {
+        title: "08",
+        image: "/projects/roodraksh_kundan/gallery08.jpg",
+      },
+      {
+        title: "09",
+        image: "/projects/roodraksh_kundan/gallery09.jpg",
+      },
+      {
+        title: "010",
+        image: "/projects/roodraksh_kundan/gallery010.jpg",
+      },
+      {
+        title: "011",
+        image: "/projects/roodraksh_kundan/gallery011.jpg",
+      },
+      {
+        title: "012",
+        image: "/projects/roodraksh_kundan/gallery012.jpg",
+      },
+      {
+        title: "013",
+        image: "/projects/roodraksh_kundan/gallery013.jpg",
+      },
+      {
+        title: "014",
+        image: "/projects/roodraksh_kundan/gallery014.jpg",
+      },
+      {
+        title: "015",
+        image: "/projects/roodraksh_kundan/gallery015.jpg",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Roodraksh Pride",
+    slug: "roodraksh-pride",
+    city: "Agartala",
+    type: "Residential",
+    status: "Completed",
+    feature_image: "/projects/roodraksh_pride/feature.jpg",
+    banner_image: "/projects/roodraksh_pride/banner.webp",
+    brochure_url: "",
+    more_details: {
+      area: "11376 Sq.Ft.",
+      rera_no: "RERAA KM 31 of 2023-24",
+      total_spaces: "16",
+      total_towers: "1",
+      flat_sizes: "1582 Sq.Ft. - 1768 Sq.Ft.",
+      bhk: "3 BHK",
+    },
+    short_description:
+      "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
+    description:
+      " a new address of comfort and convenience awaits you in Agartala. Landscaped gardens, recreational areas, and essential amenities bring community and relaxation together. Strategically located for effortless access to city essentials, the project ensures that everything you need is always close by. It’s where modern aspirations meet practical living.",
+    amenities: [],
+    location: {
+      address:
+        "1 NO JAPORIGOG GAON, BHASKAR NAGAR, NEAR BHASKAR VIDYAPEETH SCHOOL",
+      map_url:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7298.917071919816!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e0!3m2!1sen!2sin!4v1750315556200!5m2!1sen!2sin",
+      satellite_view:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6937.772737632117!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e1!3m2!1sen!2sin!4v1750227761753!5m2!1sen!2sin",
+      live_view:
+        "https://www.google.com/maps/embed?pb=!4v1750227826624!6m8!1m7!1sYW1smpibe1nAo0v_qCN3Ag!2m2!1d23.83778098518578!2d91.26646286060624!3f5.03!4f-0.6700000000000017!5f2.7697822373993626",
+    },
+    nearby_places: [],
+    layout_plans: [],
+    gallery: [],
+  },
+  {
     id: 3,
     title: "Roodraksh Sapphire",
     slug: "roodraksh-sapphire",
@@ -274,7 +513,7 @@ export const projects = [
       bhk: "2 & 3 BHK",
     },
     short_description:
-      "At Roodraksh Sapphire you will find peaceful and calm surroundings, a break from the busy city life and river views will help you relax.",
+      "Roodraksh Sapphire welcomes you to a haven of tranquillity, away from the city’s hustle, where scenic views and calm surroundings help you unwind.",
     description:
       "offers more than just a home where peace, joy, and connection thrive. Whether you're spending joyful moments with your family or engaging with a vibrant neighbourhood, every detail nurtures your happiness and well-being. Here you will experience a lifestyle that fosters true belonging and makes every day feel special.",
     amenities: amenities.filter((item) =>
@@ -527,43 +766,7 @@ export const projects = [
   //   layout_plans: [],
   //   gallery: [],
   // },
-  {
-    id: 7,
-    title: "Roodraksh Pride",
-    slug: "roodraksh-pride",
-    city: "Agartala",
-    type: "Residential",
-    status: "Completed",
-    feature_image: "/projects/roodraksh_pride/feature.jpg",
-    banner_image: "/projects/roodraksh_pride/banner.webp",
-    brochure_url: "",
-    more_details: {
-      area: "11376 Sq.Ft.",
-      rera_no: "RERAA KM 31 of 2023-24",
-      total_spaces: "16",
-      total_towers: "1",
-      flat_sizes: "1582 Sq.Ft. - 1768 Sq.Ft.",
-      bhk: "3 BHK",
-    },
-    short_description:
-      "Strategically located the project offers contemporary homes designed with a focus on space efficiency, safety, and sustainability.",
-    description:
-      " a new address of comfort and convenience awaits you in Agartala. Landscaped gardens, recreational areas, and essential amenities bring community and relaxation together. Strategically located for effortless access to city essentials, the project ensures that everything you need is always close by. It’s where modern aspirations meet practical living.",
-    amenities: [],
-    location: {
-      address:
-        "1 NO JAPORIGOG GAON, BHASKAR NAGAR, NEAR BHASKAR VIDYAPEETH SCHOOL",
-      map_url:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7298.917071919816!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e0!3m2!1sen!2sin!4v1750315556200!5m2!1sen!2sin",
-      satellite_view:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6937.772737632117!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e1!3m2!1sen!2sin!4v1750227761753!5m2!1sen!2sin",
-      live_view:
-        "https://www.google.com/maps/embed?pb=!4v1750227826624!6m8!1m7!1sYW1smpibe1nAo0v_qCN3Ag!2m2!1d23.83778098518578!2d91.26646286060624!3f5.03!4f-0.6700000000000017!5f2.7697822373993626",
-    },
-    nearby_places: [],
-    layout_plans: [],
-    gallery: [],
-  },
+
   // {
   //   id: 8,
   //   title: "Roodraksh Elite",
@@ -636,208 +839,7 @@ export const projects = [
   //   layout_plans: [],
   //   gallery: [],
   // },
-  {
-    id: 10,
-    title: "Roodraksh Kundan",
-    slug: "roodraksh-kundan",
-    city: "Guwahati",
-    type: "Residential / Commercial",
-    status: "Ready To Move In",
-    feature_image: "/projects/roodraksh_kundan/feature.jpg",
-    banner_image: "/projects/roodraksh_kundan/banner.jpg",
-    brochure_url: "/brochure/brochure-roodraksh-kundan-1748413988.pdf",
-    more_details: {
-      area: "-",
-      rera_no: "RERAA KM 267 OF 2021-2022",
-      total_spaces: "318",
-      total_towers: "-",
-      flat_sizes: "624 Sq.Ft. - 1331 Sq.Ft.",
-      bhk: "2 & 3 BHK",
-    },
-    short_description:
-      "Roodraksh Kundan lets you live peacefully in a thoughtfully designed space that celebrates privacy and everyday moments.",
-    description:
-      " offers premium living in North East India with homes pre-inspected by MACJ in collaboration with A Buyer’s Choice Home Inspections, USA. The project is built with earthquake-resistant RCC structure, gated security, fire safety, and elegant interiors. It offers a peaceful, well-designed space where comfort, privacy, and quality come together for modern families.",
-    amenities: amenities.filter((item) =>
-      [3, 9, 16, 17, 18, 19, 20, 21, 22, 23, 24].includes(item.id)
-    ),
 
-    location: {
-      address: "SATGAON MAIN ROAD , BESIDE SFS SCHOOL, GUWAHATI - 781170",
-      map_url:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.856014913118!2d91.831759!3d26.166474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a592bf05573a1%3A0x7cd7fa416bd6b80c!2sRoodraksh%20Kundan%20-%202%20and%203%20BHK%20Flats%20and%20Apartments%20For%20Sale%20in%20Guwahati!5e0!3m2!1sen!2sin!4v1750316014703!5m2!1sen!2sin",
-      satellite_view:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6807.493347508563!2d91.831759!3d26.166474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a592bf05573a1%3A0x7cd7fa416bd6b80c!2sRoodraksh%20Kundan%20-%202%20and%203%20BHK%20Flats%20and%20Apartments%20For%20Sale%20in%20Guwahati!5e1!3m2!1sen!2sin!4v1750230932672!5m2!1sen!2sin",
-      live_view:
-        "https://www.google.com/maps/embed?pb=!4v1750230976771!6m8!1m7!1sdXBiMJ9I5_HW3ogKX_Px9w!2m2!1d26.1661463308015!2d91.83121175649713!3f56.59!4f0!5f0.5970117501821992",
-    },
-    nearby_places: [
-      {
-        title: "Hospitals",
-        places: [
-          {
-            title: "Pratiksha Hospital",
-            distance: "2.9 km",
-          },
-        ],
-      },
-      {
-        title: "Transport",
-        places: [
-          {
-            title: "Narengi Railway Station",
-            distance: "2 km",
-          },
-        ],
-      },
-      {
-        title: "Market",
-        places: [
-          {
-            title: "Market",
-            distance: "500 mtr",
-          },
-          {
-            title: "Ganeshguri (G S Road)",
-            distance: "8.5 km",
-          },
-        ],
-      },
-      {
-        title: "Schools",
-        places: [
-          {
-            title: "St Francis De Sales Higher Secondary School",
-            distance: "Next Building",
-          },
-          {
-            title: "Army Public School, Narengi",
-            distance: "3.7 km",
-          },
-        ],
-      },
-      {
-        title: "University",
-        places: [
-          {
-            title: "Narangi Anchalik Mahavidyalaya",
-            distance: "800 mtr",
-          },
-        ],
-      },
-      {
-        title: "Zoo",
-        places: [
-          {
-            title: "zoo",
-            distance: "7.2 km ",
-          },
-        ],
-      },
-      {
-        title: "Museum",
-        places: [
-          {
-            title: "Srimanta sankaradava kalashetra",
-            distance: "5.4 km ",
-          },
-        ],
-      },
-      {
-        title: "others",
-        places: [
-          {
-            title: "Assam Secretariat",
-            distance: "6.5 km ",
-          },
-        ],
-      },
-    ],
-    layout_plans: [
-      {
-        title: "Type 1 & 2",
-        image: "/projects/roodraksh_kundan/layout01.webp",
-      },
-      {
-        title: "Type 3-A & 3-B",
-        image: "/projects/roodraksh_kundan/layout02.webp",
-      },
-      {
-        title: "Typical Floor Plan - Block 4",
-        image: "/projects/roodraksh_kundan/layout03.webp",
-      },
-      {
-        title: "Typical Floor Plan 2 - Block C & E",
-        image: "/projects/roodraksh_kundan/layout04.webp",
-      },
-      {
-        title: "Typical Floor Plan 3 - BLOCK D",
-        image: "/projects/roodraksh_kundan/layout05.webp",
-      },
-    ],
-    gallery: [
-      {
-        title: "01",
-        image: "/projects/roodraksh_kundan/gallery01.jpg",
-      },
-      {
-        title: "02",
-        image: "/projects/roodraksh_kundan/gallery02.jpg",
-      },
-      {
-        title: "03",
-        image: "/projects/roodraksh_kundan/gallery03.jpg",
-      },
-      {
-        title: "04",
-        image: "/projects/roodraksh_kundan/gallery04.jpg",
-      },
-      {
-        title: "05",
-        image: "/projects/roodraksh_kundan/gallery05.jpg",
-      },
-      {
-        title: "06",
-        image: "/projects/roodraksh_kundan/gallery06.jpg",
-      },
-      {
-        title: "07",
-        image: "/projects/roodraksh_kundan/gallery07.jpg",
-      },
-      {
-        title: "08",
-        image: "/projects/roodraksh_kundan/gallery08.jpg",
-      },
-      {
-        title: "09",
-        image: "/projects/roodraksh_kundan/gallery09.jpg",
-      },
-      {
-        title: "010",
-        image: "/projects/roodraksh_kundan/gallery010.jpg",
-      },
-      {
-        title: "011",
-        image: "/projects/roodraksh_kundan/gallery011.jpg",
-      },
-      {
-        title: "012",
-        image: "/projects/roodraksh_kundan/gallery012.jpg",
-      },
-      {
-        title: "013",
-        image: "/projects/roodraksh_kundan/gallery013.jpg",
-      },
-      {
-        title: "014",
-        image: "/projects/roodraksh_kundan/gallery014.jpg",
-      },
-      {
-        title: "015",
-        image: "/projects/roodraksh_kundan/gallery015.jpg",
-      },
-    ],
-  },
   // {
   //   id: 11,
   //   title: "Roodraksh Chakraborty Mansion",

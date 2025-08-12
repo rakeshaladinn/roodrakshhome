@@ -7,9 +7,9 @@ import Button from "../Controls/Button";
 import Mainheading from "../Comman/Mainheading";
 
 const features = [
-  "Pontificate the client proactively",
-  "Does the selected item have a waiting list?",
-  "Instant 24-hour Emergency",
+  "Timely handover through precise planning ",
+  "Use superior materials from foundation to finishing",
+  "Robust infrastructure using modern design concepts and frameworks",
 ];
 
 const Whoweare = () => {
@@ -19,10 +19,10 @@ const Whoweare = () => {
         <div className="absolute -left-12  md:-left-10 top-1/3 transform -rotate-90 z-10">
           <div className="flex flex-col items-center gap-2">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-              697k+
+              95%
             </h3>
             <p className="text-md tracking-widest text-gray-700 font-medium">
-              LISTED PROPERTIES
+              On- Time Delivery{" "}
             </p>
           </div>
         </div>
@@ -54,12 +54,10 @@ const Whoweare = () => {
       <div className=" w-full lg:w-[48%] 2xl:w-1/2">
         <div className="mb-6">
           <Mainheading
-            SubTitle="  Who We Are"
+            SubTitle="Why Choose Us"
             Icon={<FaHome className="text-primary" />}
-            Title="   Where Finding A House  Feels Like Home"
-            Description=" At our core, we believe finding a home should feel comforting, not
-            complicated. That’s why we offer trusted listings, expert support,
-            and a seamless experience tailored to your needs and dreams."
+            Title="  Choosing Excellence With Every Step "
+            Description="Our developments are living proof of exceptional construction standards and architectural designs showcasing our dedication to quality and detail. Also, as an esteemed member of the Assam Real Estate & Infrastructure Developers Association (AREIDA), we follow the highest standards and uphold the best practices of the industry."
           />
         </div>
 
@@ -79,9 +77,10 @@ const Whoweare = () => {
         {/* CTA & Phone */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <Button
-            text="About us more"
+            link={"/about"}
+            text=" Know more"
             icon={<FaHome />}
-            className="bg-black hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
+            className="bg-black w-fit hover:bg-primary transition-all duration-300 text-white px-6 py-3 rounded-full text-base  font-medium"
           />
           <a
             href="tel:+91-9164-67-9164"

@@ -8,10 +8,10 @@ import Button from "../Controls/Button";
 import { FaHome } from "react-icons/fa";
 
 const features = [
-  "Quality real estate services",
-  "100% Satisfaction guarantee",
-  "Highly professional team",
-  "Dealing always on time",
+  "Well - connected to prime locations",
+  "Safe and secure community living ",
+  "Top-notch amenities ",
+  "Focus on sustainability & eco -friendly living ",
 ];
 
 const About = () => {
@@ -41,10 +41,10 @@ const About = () => {
       </div>
       <div className="w-full lg:w-1/2">
         <Mainheading
-          SubTitle="AboutOurCompany"
+          SubTitle="About Roodraksh Group "
           Icon={<FaHome />}
-          Title="Experts In Commercial Living Solutions"
-          Description="With years of industry experience, we specialize in delivering high-quality commercial apartments that blend business functionality with modern comfort—designed to support your growth, elevate your presence"
+          Title="Live the Luxury You Deserve "
+          Description="Since 2008, the Roodraksh Group has a strong presence in Guwahati and Agartala and  is shaping the urban skyline of North-Eastern India. From modern residences to commercial spaces, our developments blend style, functionality, and sustainability. Every project is thoughtfully planned to deliver lasting value and meet the needs of evolving urban lifestyles."
         />
         <div className="flex md:flex-row flex-col justify-start gap-10">
           <div className="space-y-8">
@@ -62,9 +62,10 @@ const About = () => {
               ))}
             </ul>
             <Button
-              text="Learn More"
+              link={"/about"}
+              text="Read More"
               icon={<FaArrowRight />}
-              className="bg-primary text-base  hover:bg-black transition-all duration-500 text-white px-4 py-3 rounded-2xl items-center flex clip-top-right"
+              className="bg-primary text-base w-fit  hover:bg-black transition-all duration-500 text-white px-4 py-3 rounded-2xl items-center flex clip-top-right"
             />
           </div>
           {/* <div className="bg-lime-100 border-primary/60 flex justify-center items-center flex-col h-40 w-52 px-12  py-6 rounded-xl text-center">

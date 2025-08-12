@@ -12,17 +12,17 @@ const Cta = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch z-10 relative">
         <div className="flex flex-col justify-center space-y-6 px-5 md:px-16 lg:pl-20 py-12 lg:py-20 h-full">
           <Mainheading
-            SubTitle="REAL ESTATE"
+            SubTitle="Got a Question?"
             color="text-white"
-            Title="Your Luxury. Your Lifestyle."
+            Title="Reach out to us to find your perfect space"
             Icon={<FaHome />}
           />
           <p className="text-white/80  leading-relaxed text-base md:text-lg font-normal">
-            At our core, we believe finding a home should feel comforting, not
-            complicated. That’s why we offer trusted listings, expert support,
+            On the Hunt for a Property? We’re just a call away and are ready to
+            assist you in discovering the right property for you.
           </p>
           <Button
-            text=" View properties"
+            text=" Call Now"
             icon={<FaHome />}
             className="bg-transparent text-base w-fit text-white border border-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-white hover:text-black transition duration-300"
           />

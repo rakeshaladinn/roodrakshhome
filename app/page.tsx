@@ -17,9 +17,10 @@ export default function Home() {
       <Vision />
       <FeaturedProperty />
       <Whoweare />
-      <Testimonals />
       <Cta />
-      <BlogNewsSection />
+      <Testimonals />
+
+      {/* <BlogNewsSection /> */}
     </div>
   );
 }

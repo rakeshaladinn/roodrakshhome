@@ -7,21 +7,21 @@ import Link from "next/link";
 const services = [
   {
     icon: <FaHome size={40} />,
-    title: "Property Sales & Leasing",
+    title: "Our Vision",
     description:
-      "Buy, sell, or lease premium commercial apartment units with ease.",
+      "To be recognized as the most reliable name in real estate by developing sustainable neighbourhoods that enhance and uplift everyday living.",
   },
   {
     icon: <FaPersonBooth size={40} />,
-    title: "Virtual Tours & Site Visits",
+    title: "Our Mission",
     description:
-      "Buy, sell, or lease premium commercial apartment units with ease.",
+      "To provide outstanding residences through creative design, top-notch construction, and a strong focus on customer satisfaction.",
   },
   {
     icon: <FaHandHoldingUsd size={40} />,
-    title: "Investment Consultation",
+    title: "Our Values",
     description:
-      "Buy, sell, or lease premium commercial apartment units with ease.",
+      "Honesty, openness, and a steadfast dedication to delivering excellence in every venture we pursue.",
   },
 ];
 
@@ -30,8 +30,8 @@ const Vision = () => {
     <section className="py-14 md:py-20 xl:py-24 px-5 md:px-16 lg:px-20  ">
       <div className="text-center flex items-center justify-center mb-8">
         <Mainheading
-          SubTitle="Our Mission"
-          Title="What We Offer"
+          SubTitle="Quality Meets Legacy"
+          Title="Guided by Principles, Inspired by Purpose"
           center={true}
           Icon={<FaHome className="text-primary" />}
         />
@@ -41,7 +41,7 @@ const Vision = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-black/5 group p-8 hover:scale-105  border-0 border-primary hover:border-[2px] hover:border-primary rounded-xl text-center transition-all duration-500"
+            className="bg-black/5 group p-6 hover:scale-105  border-0 border-primary hover:border-[2px] hover:border-primary rounded-xl text-center transition-all duration-500"
           >
             <div className="w-20 h-20 group-hover:bg-primary transition-all duration-500  mx-auto mb-6 bg-white rounded-md flex items-center justify-center ">
               <span className="text-black transition-all duration-500 group-hover:text-white">
@@ -54,13 +54,6 @@ const Vision = () => {
             <p className="text-[#5f6f81] text-base mb-6">
               {service?.description}
             </p>
-            <Link
-              href=""
-              className="text-black  group-hover:text-primary cursor-pointer font-semibold flex w-full items-center gap-2 justify-center text-sm"
-            >
-              <FaHome className="text-lg" />
-              Read More
-            </Link>
           </div>
         ))}
       </div>
