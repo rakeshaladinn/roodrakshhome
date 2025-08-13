@@ -38,7 +38,7 @@ const bannerData = [
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 top-20 rounded-3xl overflow-hidden ">
+    <div className="relative mx-3 top-24 rounded-3xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
@@ -82,7 +82,7 @@ const MainBanner = () => {
           </div>
         ))}
       </Slider>
-      <div className="w-1/3 absolute right-10 top-[12%] 2xl:top-[21%] xl:block hidden">
+      <div className="w-1/3 absolute right-10 top-[12%] bg-white rounded-md  px-4 pb-3 2xl:top-[21%] xl:block hidden">
         <Modalform title={"Enquire Now"} />
       </div>
     </div>

@@ -34,18 +34,18 @@ const Banner = ({ projectsdata }: any) => {
           );
         })}
       </Slider>
-      <div className="z-10 py-10 hidden md:block  md:py-5 md:absolute md:bottom-44 bg-white/80  w-full md:w-[50%] lg:w-[40%] px-4  rounded-lg md:left-[30%]">
+      <div
+        className="z-10 py-6 px-4 bg-white/80 rounded-lg 
+                absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                w-[90%] md:w-[50%] lg:w-[40%]"
+      >
         {projectsdata?.title && (
-          <h1
-            className={`text-xl md:text-2xl text-center 2xl:text-3xl text-primary  font-medium transition-opacity duration-700 `}
-          >
+          <h1 className="text-xl md:text-2xl 2xl:text-3xl text-primary font-medium text-center">
             {projectsdata?.title}
           </h1>
         )}
         {projectsdata?.short_description && (
-          <p
-            className={`text-base md:text-lg leading-8 text-center text-zinc-900 mt-3  `}
-          >
+          <p className="text-base md:text-lg leading-8 text-center text-zinc-900 mt-3">
             {projectsdata?.short_description}
           </p>
         )}

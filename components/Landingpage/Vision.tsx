@@ -4,21 +4,25 @@ import { FaHome, FaPersonBooth, FaHandHoldingUsd } from "react-icons/fa";
 import Mainheading from "../Comman/Mainheading";
 import Link from "next/link";
 
+import { FaEye, FaBullseye, FaHandshake } from "react-icons/fa"; // changed icons
+import Image from "next/image";
+import { Appassets } from "@/constants/Appassets";
+
 const services = [
   {
-    icon: <FaHome size={40} />,
+    icon: Appassets.icon1,
     title: "Our Vision",
     description:
       "To be recognized as the most reliable name in real estate by developing sustainable neighbourhoods that enhance and uplift everyday living.",
   },
   {
-    icon: <FaPersonBooth size={40} />,
+    icon: Appassets.icon2,
     title: "Our Mission",
     description:
       "To provide outstanding residences through creative design, top-notch construction, and a strong focus on customer satisfaction.",
   },
   {
-    icon: <FaHandHoldingUsd size={40} />,
+    icon: Appassets.icon3,
     title: "Our Values",
     description:
       "Honesty, openness, and a steadfast dedication to delivering excellence in every venture we pursue.",
@@ -43,10 +47,17 @@ const Vision = () => {
             key={index}
             className="bg-black/5 group p-6 hover:scale-105  border-0 border-primary hover:border-[2px] hover:border-primary rounded-xl text-center transition-all duration-500"
           >
-            <div className="w-20 h-20 group-hover:bg-primary transition-all duration-500  mx-auto mb-6 bg-white rounded-md flex items-center justify-center ">
-              <span className="text-black transition-all duration-500 group-hover:text-white">
-                {service?.icon}
-              </span>
+            <div className="w-20 h-20  transition-all bg-white duration-500  mx-auto mb-6  rounded-md flex items-center justify-center ">
+              <div className=" p-4 ">
+                <Image
+                  src={service?.icon}
+                  alt="icons image"
+                  width={1920}
+                  height={1080}
+                  priority
+                  className="w-10 h-10 grayscale group-hover:grayscale-0  group-hover:scale-x-[-1] transition-all duration-500"
+                />
+              </div>
             </div>
             <h3 className=" text-xl md:text-2xl font-semibold text-[#0c1727] mb-3">
               {service?.title}

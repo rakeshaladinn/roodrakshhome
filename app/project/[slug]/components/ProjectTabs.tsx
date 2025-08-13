@@ -7,7 +7,6 @@ export default function ProjectTabs() {
     { label: "LOCATION", id: "location" },
     { label: "LAYOUT PLANS", id: "layout-plans" },
     { label: "IMAGE GALLERY", id: "image-gallery" },
-    { label: "ENQUIRY & BROCHURE", id: "enquiry" },
   ];
 
   const handleScroll = (id: string) => {
@@ -20,12 +19,12 @@ export default function ProjectTabs() {
     }
   };
   return (
-    <div className="bg-white shadow-lg px-2 py-4 flex flex-wrap justify-center gap-4 lg:gap-7  xl:gap-12">
+    <div className="bg-white shadow-xl px-2 py-4 flex flex-wrap justify-center gap-4 lg:gap-7  xl:gap-12">
       {tabs.map((tab, index) => (
         <button
           key={index}
           onClick={() => handleScroll(tab.id)}
-          className="text-black text-sm font-semibold tracking-widest hover:text-primary cursor-pointer transition-colors duration-200"
+          className="text-black text-base font-semibold tracking-widest hover:text-primary cursor-pointer transition-colors duration-200"
         >
           {tab.label}
         </button>

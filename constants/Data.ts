@@ -255,6 +255,44 @@ export const projects = [
   //   ],
   //   layout_plans: [],
   // },
+
+  // {
+  //   id: 7,
+  //   title: "Roodraksh Pride",
+  //   slug: "roodraksh-pride",
+  //   city: "Agartala",
+  //   type: "Residential",
+  //   status: "Completed",
+  //   feature_image: "/projects/roodraksh_pride/feature.jpg",
+  //   banner_image: "/projects/roodraksh_pride/banner.webp",
+  //   brochure_url: "",
+  //   more_details: {
+  //     area: "11376 Sq.Ft.",
+  //     rera_no: "RERAA KM 31 of 2023-24",
+  //     total_spaces: "16",
+  //     total_towers: "1",
+  //     flat_sizes: "1582 Sq.Ft. - 1768 Sq.Ft.",
+  //     bhk: "3 BHK",
+  //   },
+  //   short_description:
+  //     "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
+  //   description:
+  //     "introduces a new destination of comfort and ease in Agartala. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
+  //   amenities: [],
+  //   location: {
+  //     address:
+  //       "1 NO JAPORIGOG GAON, BHASKAR NAGAR, NEAR BHASKAR VIDYAPEETH SCHOOL",
+  //     map_url:
+  //       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7298.917071919816!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e0!3m2!1sen!2sin!4v1750315556200!5m2!1sen!2sin",
+  //     satellite_view:
+  //       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6937.772737632117!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e1!3m2!1sen!2sin!4v1750227761753!5m2!1sen!2sin",
+  //     live_view:
+  //       "https://www.google.com/maps/embed?pb=!4v1750227826624!6m8!1m7!1sYW1smpibe1nAo0v_qCN3Ag!2m2!1d23.83778098518578!2d91.26646286060624!3f5.03!4f-0.6700000000000017!5f2.7697822373993626",
+  //   },
+  //   nearby_places: [],
+  //   layout_plans: [],
+  //   gallery: [],
+  // },
   {
     id: 10,
     title: "Roodraksh Kundan",
@@ -262,7 +300,7 @@ export const projects = [
     city: "Guwahati",
     type: "Residential / Commercial",
     status: "Ready To Move In",
-    feature_image: "/projects/roodraksh_kundan/feature.jpg",
+    feature_image: "/projects/roodraksh_kundan/feature.png",
     banner_image: "/projects/roodraksh_kundan/banner.jpg",
     brochure_url: "/brochure/brochure-roodraksh-kundan-1748413988.pdf",
     more_details: {
@@ -458,50 +496,13 @@ export const projects = [
     ],
   },
   {
-    id: 7,
-    title: "Roodraksh Pride",
-    slug: "roodraksh-pride",
-    city: "Agartala",
-    type: "Residential",
-    status: "Completed",
-    feature_image: "/projects/roodraksh_pride/feature.jpg",
-    banner_image: "/projects/roodraksh_pride/banner.webp",
-    brochure_url: "",
-    more_details: {
-      area: "11376 Sq.Ft.",
-      rera_no: "RERAA KM 31 of 2023-24",
-      total_spaces: "16",
-      total_towers: "1",
-      flat_sizes: "1582 Sq.Ft. - 1768 Sq.Ft.",
-      bhk: "3 BHK",
-    },
-    short_description:
-      "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
-    description:
-      "introduces a new destination of comfort and ease in Agartala. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
-    amenities: [],
-    location: {
-      address:
-        "1 NO JAPORIGOG GAON, BHASKAR NAGAR, NEAR BHASKAR VIDYAPEETH SCHOOL",
-      map_url:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7298.917071919816!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e0!3m2!1sen!2sin!4v1750315556200!5m2!1sen!2sin",
-      satellite_view:
-        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6937.772737632117!2d91.266472!3d23.837846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f43e77b90c81%3A0x87977beb0aa1e7b6!2sRoodraksh%20Pride%20Apartments!5e1!3m2!1sen!2sin!4v1750227761753!5m2!1sen!2sin",
-      live_view:
-        "https://www.google.com/maps/embed?pb=!4v1750227826624!6m8!1m7!1sYW1smpibe1nAo0v_qCN3Ag!2m2!1d23.83778098518578!2d91.26646286060624!3f5.03!4f-0.6700000000000017!5f2.7697822373993626",
-    },
-    nearby_places: [],
-    layout_plans: [],
-    gallery: [],
-  },
-  {
     id: 3,
     title: "Roodraksh Sapphire",
     slug: "roodraksh-sapphire",
     city: "Guwahati",
     type: "Residential",
     status: "Ongoing",
-    feature_image: "/projects/roodraksh_sapphire/feature.jpg",
+    feature_image: "/projects/roodraksh_sapphire/feature.png",
     banner_image: "/projects/roodraksh_sapphire/banner.jpg",
     brochure_url: "",
     more_details: {
@@ -653,6 +654,43 @@ export const projects = [
         image: "/projects/roodraksh_sapphire/gallery05.jpg",
       },
     ],
+  },
+  {
+    id: 33,
+    title: "Roodraksh Pride",
+    slug: "roodraksh-pride2",
+    city: "Guwahati",
+    type: "Residential",
+    status: "Ready To Move In",
+    feature_image: "/projects/roodraksh_pride02/feature.png",
+    banner_image: "/projects/roodraksh_pride02/banner.png",
+    brochure_url: "/brochure/RR pride.pdf",
+    more_details: {
+      area: "-",
+      rera_no: "RERAA KM 31 OF 2023-2024",
+      total_spaces: "-",
+      total_towers: "-",
+      flat_sizes: "-",
+      bhk: "-",
+    },
+    short_description:
+      "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
+    description:
+      " introduces a new destination of comfort and ease in Agartala. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
+    amenities: [],
+    location: {
+      address:
+        "BHASKAR NAGAR, R G B ROAD, BESIDE BHASKAR VIDYAPEETH SCHOOL -781003",
+      map_url:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.108668829117!2d91.777224!3d26.17864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59210013721d%3A0xc8e892b61e95344f!2sRoodraksh%20Pride!5e0!3m2!1sen!2sin!4v1750329343927!5m2!1sen!2sin",
+      satellite_view:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d348469.8000720468!2d91.87580054571532!3d26.389597063068027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59210013721d%3A0xc8e892b61e95344f!2sRoodraksh%20Pride!5e1!3m2!1sen!2sin!4v1751021336155!5m2!1sen!2sin",
+      live_view:
+        "https://www.google.com/maps/embed?pb=!4v1750329436162!6m8!1m7!1sfHbK6vCvdZI-ycOPvMxumQ!2m2!1d26.17862981983125!2d91.77739460024777!3f206.58!4f23.33!5f0.5970117501821992",
+    },
+    nearby_places: [],
+    layout_plans: [],
+    gallery: [],
   },
   // {
   //   id: 4,
@@ -1827,41 +1865,7 @@ export const projects = [
   //   layout_plans: [],
   //   gallery: [],
   // },
-  // {
-  //   id: 33,
-  //   title: "Roodraksh Pride",
-  //   slug: "roodraksh-pride2",
-  //   city: "Guwahati",
-  //   type: "-",
-  //   status: "Ready To Move In",
-  //   feature_image: "/projects/roodraksh_pride02/feature.jpg",
-  //   banner_image: "/projects/roodraksh_pride02/banner.jpg",
-  //   brochure_url: "",
-  //   more_details: {
-  //     area: "-",
-  //     rera_no: "RERAA KM 31 OF 2023-2024",
-  //     total_spaces: "-",
-  //     total_towers: "-",
-  //     flat_sizes: "-",
-  //     bhk: "-",
-  //   },
-  //   short_description: "",
-  //   description: "",
-  //   amenities: [],
-  //   location: {
-  //     address:
-  //       "BHASKAR NAGAR, R G B ROAD, BESIDE BHASKAR VIDYAPEETH SCHOOL -781003",
-  //     map_url:
-  //       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.108668829117!2d91.777224!3d26.17864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59210013721d%3A0xc8e892b61e95344f!2sRoodraksh%20Pride!5e0!3m2!1sen!2sin!4v1750329343927!5m2!1sen!2sin",
-  //     satellite_view:
-  //       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d348469.8000720468!2d91.87580054571532!3d26.389597063068027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59210013721d%3A0xc8e892b61e95344f!2sRoodraksh%20Pride!5e1!3m2!1sen!2sin!4v1751021336155!5m2!1sen!2sin",
-  //     live_view:
-  //       "https://www.google.com/maps/embed?pb=!4v1750329436162!6m8!1m7!1sfHbK6vCvdZI-ycOPvMxumQ!2m2!1d26.17862981983125!2d91.77739460024777!3f206.58!4f23.33!5f0.5970117501821992",
-  //   },
-  //   nearby_places: [],
-  //   layout_plans: [],
-  //   gallery: [],
-  // },
+
   // {
   //   id: 34,
   //   title: "Roodraksh Bhuyan",

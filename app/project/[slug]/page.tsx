@@ -26,11 +26,13 @@ const Page = async ({ params }: any) => {
   }
   console.log("projectDataprojectData", projectData);
   return (
-    <div className="bg-gray-100 overflow-hidden ">
+    <div className="bg-gray-100 mt-10">
       <Banner projectsdata={projectData} />
-      <div className="flex  flex-col xl:flex-row gap-6 px-4 xl:px-32 py-10 relative">
-        <div className="w-full flex flex-col gap-6 ">
+
+      <div className="flex flex-col xl:flex-row gap-6 px-4 md:px-10 py-10">
+        <div className="w-full xl:w-[70%] flex flex-col gap-6">
           <Overview id="overview" projectsdata={projectData} />
+
           {projectData?.amenities?.length > 1 && (
             <Amenities id="amenities" projectsdata={projectData} />
           )}
@@ -46,14 +48,10 @@ const Page = async ({ params }: any) => {
           {projectData?.gallery?.length > 1 && (
             <ImageGallery id="image-gallery" projectsdata={projectData} />
           )}
-
-          <EnquireNow id="enquiry" projectsdata={projectData} />
         </div>
-        {/* <div className="w-full xl:w-[30%] flex flex-col gap-6 "> */}
-        {/* {projectData?.status != "Completed" && ( */}
-        {/* )} */}
-        {/* <HomeLoanCalculator />
-        </div> */}
+        <div className="w-full xl:w-[30%] xl:sticky xl:top-20 self-start">
+          <EnquireNow projectsdata={projectData} />
+        </div>
       </div>
     </div>
   );

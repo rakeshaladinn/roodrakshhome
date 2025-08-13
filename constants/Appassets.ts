@@ -2,7 +2,7 @@ export class Appassets {
   static Logo = require("../public/Roodraksh-logo-white.png");
   static BlackLogo = require("../public/logo.webp");
   static Project_roodraksh_kundan = require("../public/projects/roodraksh_kundan/banner.jpg");
-  static Project_roodraksh_pride = require("../public/projects/roodraksh_pride/banner.webp");
+  static Project_roodraksh_pride = require("../public/projects/roodraksh_pride02/banner.png");
   static Project_roodraksh_sapphire = require("../public/projects/roodraksh_sapphire/banner.jpg");
   //About
   static About = require("../public/About/about-1.png");
@@ -13,7 +13,7 @@ export class Appassets {
   static Magnify = require("../public/whoweare/about-02.png");
 
   //Cta
-  static Cta = require("../public/cta/propertie-feature-image.png");
+  static Cta = require("../public/cta/main.png");
 
   // Blogs Images
   static Blog1 = require("../public/blogs/news-1.jpg");
@@ -22,4 +22,7 @@ export class Appassets {
 
   // project images
   static Project_agency = require("../public/projects/agenc-1.webp");
+  static icon1 = require("../public/vision/our-vision.svg");
+  static icon2 = require("../public/vision/our-mission.svg");
+  static icon3 = require("../public/vision/our-values.svg");
 }

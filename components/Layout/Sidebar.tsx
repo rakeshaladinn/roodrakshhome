@@ -24,7 +24,7 @@ export const navItems = [
     children: [
       {
         label: "Roodraksh Pride",
-        url: "/project/roodraksh-pride",
+        url: "/project/roodraksh-pride2",
       },
       {
         label: "Roodraksh Sapphire",
@@ -227,7 +227,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               className="hover:scale-125 transition-all duration-500"
             />
           </div>
-          <div className="space-y-8 text-base mt-6">
+          <div className="space-y-12 text-base mt-8">
             <div className="text-start">
               At Roodraksh Group, we have been reshaping the urban landscapes of
               North-Eastern India especially in Guwahati and Agartala through

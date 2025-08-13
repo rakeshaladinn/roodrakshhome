@@ -4,7 +4,6 @@ import About from "../components/Landingpage/About";
 import Vision from "@/components/Landingpage/Vision";
 import Cta from "@/components/Landingpage/Cta";
 import Whoweare from "@/components/Landingpage/Whoweare";
-import BlogNewsSection from "@/components/Landingpage/Blog";
 import Testimonals from "@/components/Landingpage/Testimonals";
 import FeaturedProperty from "@/components/Landingpage/FeaturedProperty";
 

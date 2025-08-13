@@ -62,7 +62,7 @@ const page = () => {
         Title="Contact us"
         background={"bg-[url('/banners/contactbanner.png')]"}
       />
-      {/* <Card /> */}
+      <Card />
       <Contactform />
     </div>
   );

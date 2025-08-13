@@ -31,14 +31,14 @@ const EnquireNow = ({ projectsdata, id }: any) => {
   return (
     <div
       id={id}
-      className="w-full  bg-white px-4 md:px-6 py-8 shadow-xl rounded-md"
+      className="w-full  bg-white px-5 pt-4 pb-6 shadow-xl rounded-md"
     >
       <div className="text-center mb-6">
         <MainHeading
           Title={"Enquire Now"}
           BlackColor={true}
           ClassNameTitle={
-            "text-center justify-center capitalize lg:text-3xl mb-2"
+            "text-center justify-center capitalize lg:text-2xl mb-2"
           }
         />
       </div>
@@ -62,7 +62,7 @@ const EnquireNow = ({ projectsdata, id }: any) => {
         <div className="text-center">
           <button
             type="submit"
-            className="w-fit cursor-pointer  bg-[#ed2f59] hover:bg-[#ed2f59]/90 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full cursor-pointer  bg-[#ed2f59] hover:bg-[#ed2f59]/90 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {EnquiryFormik?.isSubmitting ? "Sending...." : "Send Message"}
           </button>
@@ -113,7 +113,7 @@ const EnquireNow = ({ projectsdata, id }: any) => {
             <a
               download
               href={`${projectsdata?.brochure_url}`}
-              className="w-fit flex items-center justify-center space-x-2 bg-white border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-md transition-all duration-200 focus:outline-none  hover:-translate-y-2 cursor-pointer"
+              className="w-full flex items-center justify-center space-x-2 bg-white border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-md transition-all duration-200 focus:outline-none  hover:-translate-y-2 cursor-pointer"
             >
               <FaDownload className="text-lg" />
               <span>{enquiryData.downloadButton.text}</span>

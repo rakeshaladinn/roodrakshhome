@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaBed, FaStar } from "react-icons/fa";
+import { FaBed, FaFileAlt, FaFileMedicalAlt, FaStar } from "react-icons/fa";
 import { BiExpand } from "react-icons/bi";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Mainheading from "../Comman/Mainheading";
@@ -9,6 +9,10 @@ import { GiBathtub } from "react-icons/gi";
 import { BsArrowRight } from "react-icons/bs";
 import { Appassets } from "@/constants/Appassets";
 import { projects } from "@/constants/Data";
+import { FaAddressBook, FaLocationDot } from "react-icons/fa6";
+import { useState } from "react";
+import Modal from "../Comman/Modal";
+import Modalform from "../Comman/Modalform";
 
 // const properties = [
 //   {
@@ -59,8 +63,12 @@ import { projects } from "@/constants/Data";
 // ];
 
 export default function FeaturedProperty() {
+  const [open, setOpen] = useState<{ project: string; open: boolean }>({
+    project: "",
+    open: false,
+  });
   return (
-    <section className="bg-[#292b2c] text-white py-14 md:py-20  xl:py-24 px-5 md:px-16 lg:px-20">
+    <section className="bg-[#292b2c]  py-14 md:py-20  xl:py-24 px-5 md:px-16 lg:px-20">
       <div>
         {/* Heading Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
@@ -98,7 +106,7 @@ export default function FeaturedProperty() {
                 {/* Property Content */}
                 <div className="w-full lg:w-[60%] md:px-6 lg:px-10 text-white  md:border-l border-white/10">
                   <p className="text-primary mb-1 text-xs sm:text-sm font-medium">
-                    {property.type || "Residential"}
+                    {property.status || "Residential"}
                   </p>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
                     {property.title || "Untitled Project"}
@@ -107,49 +115,38 @@ export default function FeaturedProperty() {
                     {property.short_description || "No description available."}
                   </p>
 
-                  <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
-                    <div className="flex items-center gap-1 border border-white/30 rounded-md p-1 sm:p-2">
-                      {Array(5)
-                        .fill(0)
-                        .map((_, i) => (
-                          <FaStar
-                            key={i}
-                            className={`text-sm sm:text-lg ${
-                              i < Math.round(property.rating || 4.5)
-                                ? "text-yellow-400"
-                                : "text-white"
-                            }`}
-                          />
-                        ))}
-                      <span className="ml-1 sm:ml-2 text-xs sm:text-sm text-white">
-                        {(property.rating || 4.5).toFixed(1)}
+                  <div className="flex flex-wrap py-3 sm:flex-nowrap items-center justify-between gap-3">
+                    <div className="flex items-center gap-4  ">
+                      <FaLocationDot />
+                      <span className=" text-xs sm:text-sm text-white">
+                        {property?.location?.address || "Na"}
                       </span>
                     </div>
                   </div>
                   <div className="flex flex-wrap sm:flex-nowrap items-center text-sm sm:text-base md:text-lg justify-between pb-5 sm:pb-7 border-b border-gray-700 pt-6 sm:pt-8 mb-4">
-                    <div className="flex items-center gap-2 pr-6 sm:pr-10 ">
-                      <FaBed className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
-                      {property.more_details?.bhk || "N/A"}
+                    <div className="flex items-center text-sm gap-2 mt-2 sm:mt-0">
+                      <FaFileAlt className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
+                      {property?.type || "N/A"}
                     </div>
                     <span className="text-white/20 text-2xl">|</span>
-                    <div className="flex items-center gap-2 pl-4 mt-2 sm:mt-0">
-                      <BiExpand className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
-                      {property.more_details?.flat_sizes || "N/A"}
+
+                    <div className="flex items-center text-sm gap-2 pr-6 sm:pr-10 ">
+                      <FaFileMedicalAlt className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
+                      {property?.more_details?.rera_no || "N/A"}
                     </div>
                   </div>
 
                   <div className="flex flex-wrap sm:flex-nowrap justify-between items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <Image
-                        src={Appassets.Logo}
-                        alt="Agent"
-                        width={1920}
-                        height={1080}
-                        className="rounded-full border border-white/20 p-1 h-8 w-8 sm:h-11 sm:w-11 object-contain"
+                      {" "}
+                      <Button
+                        onClick={() =>
+                          setOpen({ project: property.title, open: true })
+                        }
+                        text="Enquire Now"
+                        icon={<BsArrowRight className="w-4 h-4" />}
+                        className="hover:bg-white border border-white/50 text-xs font-medium sm:text-base md:text-lg  transition-all duration-500 text-white hover:text-black px-5 py-2 rounded-full flex items-center"
                       />
-                      <span className="text-xs sm:text-sm">
-                        {property?.agentName || "Roodraksh Group"}
-                      </span>
                     </div>
                     <Button
                       link={`project/${property?.slug}`}
@@ -162,7 +159,7 @@ export default function FeaturedProperty() {
 
                 {/* Property Image */}
                 <div className="w-full lg:w-[45%] flex flex-col md:flex-row items-start gap-3 2xl:gap-10">
-                  <div className="h-64 xl:h-80 w-full md:w-[80%] lg:w-88">
+                  <div className="h-76  md:h-80 w-full md:w-[80%] lg:w-88">
                     <Image
                       src={property?.feature_image || "/default-property.jpg"}
                       alt={property.title || "Property"}
@@ -182,6 +179,17 @@ export default function FeaturedProperty() {
           ))}
         </div>
       </div>
+      {open.open && (
+        <Modal
+          isOpen={open.open}
+          onClose={() => setOpen({ project: "", open: false })}
+          title="Enquire Now"
+        >
+          <div className="flex w-full h-full justify-center items-center">
+            <Modalform name={open.project} />
+          </div>
+        </Modal>
+      )}
     </section>
   );
 }
