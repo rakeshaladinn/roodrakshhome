@@ -676,7 +676,7 @@ export const projects = [
     short_description:
       "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
     description:
-      " introduces a new destination of comfort and ease in Agartala. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
+      " introduces a new destination of comfort and ease in Guwahati. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
     amenities: [],
     location: {
       address:

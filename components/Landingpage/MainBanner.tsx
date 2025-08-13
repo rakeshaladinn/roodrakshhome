@@ -82,7 +82,7 @@ const MainBanner = () => {
           </div>
         ))}
       </Slider>
-      <div className="w-1/3 absolute right-25 top-1/2 -translate-y-1/2 bg-white rounded-md px-4 pb-3 xl:block hidden">
+      <div className="w-1/3 absolute right-24 top-1/2 -translate-y-1/2 bg-white rounded-md px-4 pb-3 xl:block hidden">
         <Modalform title={"Enquire Now"} />
       </div>
     </div>
