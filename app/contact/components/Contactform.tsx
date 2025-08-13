@@ -133,13 +133,13 @@ const Contactform = () => {
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-12 items-start ">
-        <div className=" w-full lg:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6">
+        <div className=" w-full lg:w-1/2 bg-white p-4 md:p-8 rounded-2xl shadow-lg space-y-6">
           <Location />
         </div>
         {/* Form Section */}
         <form
           onSubmit={formik.handleSubmit}
-          className="w-full lg:w-1/2 bg-white p-8 rounded-2xl shadow-lg space-y-6"
+          className="w-full lg:w-1/2 bg-white p-4 md:p-8 rounded-2xl shadow-lg space-y-6"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <InputField

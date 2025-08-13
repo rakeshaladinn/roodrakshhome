@@ -689,7 +689,12 @@ export const projects = [
         "https://www.google.com/maps/embed?pb=!4v1750329436162!6m8!1m7!1sfHbK6vCvdZI-ycOPvMxumQ!2m2!1d26.17862981983125!2d91.77739460024777!3f206.58!4f23.33!5f0.5970117501821992",
     },
     nearby_places: [],
-    layout_plans: [],
+    layout_plans: [
+      {
+        title: "Pride 3BHK",
+        image: "/projects/roodraksh_pride02/Pride 3BHK.png",
+      },
+    ],
     gallery: [],
   },
   // {

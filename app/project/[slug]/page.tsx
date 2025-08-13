@@ -33,7 +33,7 @@ const Page = async ({ params }: any) => {
         <div className="w-full xl:w-[70%] flex flex-col gap-6">
           <Overview id="overview" projectsdata={projectData} />
 
-          {projectData?.amenities?.length > 1 && (
+          {projectData?.amenities?.length >= 1 && (
             <Amenities id="amenities" projectsdata={projectData} />
           )}
 
@@ -41,11 +41,11 @@ const Page = async ({ params }: any) => {
             <Location id="location" projectsdata={projectData} />
           )}
 
-          {projectData?.layout_plans?.length > 1 && (
+          {projectData?.layout_plans?.length >= 1 && (
             <LayoutPlans id="layout-plans" projectsdata={projectData} />
           )}
 
-          {projectData?.gallery?.length > 1 && (
+          {projectData?.gallery?.length >= 1 && (
             <ImageGallery id="image-gallery" projectsdata={projectData} />
           )}
         </div>
