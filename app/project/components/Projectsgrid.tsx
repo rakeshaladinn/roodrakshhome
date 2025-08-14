@@ -47,12 +47,14 @@ export default function Projectsgrid({ projects }: any) {
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-wrap sm:flex-nowrap items-center text-sm sm:text-base md:text-lg justify-between pb-5 sm:pb-7 border-b border-gray-700 pt-6 sm:pt-8 mb-4">
+                  <div className="flex flex-wrap gap-6 sm:flex-nowrap items-center text-sm sm:text-base md:text-lg justify-between pb-5 sm:pb-7 border-b border-gray-700 pt-4 sm:pt-8 mb-4">
                     <div className="flex items-center text-sm gap-2 mt-2 sm:mt-0">
                       <FaFileAlt className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
                       {property?.type || "N/A"}
                     </div>
-                    <span className="text-white/20 text-2xl">|</span>
+                    <span className="text-white/20 sm:block hidden text-2xl">
+                      |
+                    </span>
 
                     <div className="flex items-center text-sm gap-2 pr-6 sm:pr-10 ">
                       <FaFileMedicalAlt className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
