@@ -22,7 +22,7 @@ const Basicdetails = ({ projectsdata }: any) => {
     <div className="bg-white px-5 py-4 rounded-lg">
       <div className="text-center mb-3">
         <MainHeading
-          Title={"Connent us"}
+          Title={"Connect us"}
           BlackColor={true}
           ClassNameTitle={
             "text-center justify-center capitalize lg:text-2xl mb-2"

@@ -39,7 +39,7 @@ const Banner = ({ projectsdata }: any) => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         flex flex-col md:flex-row items-center justify-around w-full gap-6 z-10"
       >
-        <div className="bg-white/80  w-[85%] md:w-[60%] max-w-lg xl:w-1/3 rounded-lg p-6  h-fit flex flex-col justify-center">
+        <div className="bg-white/80  w-[85%] md:w-[60%] max-w-xl xl:w-1/3 rounded-lg p-4   h-fit flex flex-col justify-center">
           {projectsdata?.title && (
             <h1 className="text-xl md:text-2xl 2xl:text-3xl text-primary font-medium">
               {projectsdata?.title}
