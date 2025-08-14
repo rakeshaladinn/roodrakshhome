@@ -19,7 +19,7 @@ export default function ProjectTabs() {
     }
   };
   return (
-    <div className="bg-white shadow-xl px-2 py-4 flex flex-wrap justify-center gap-4 lg:gap-7  xl:gap-12">
+    <div className="bg-white px-2  flex flex-wrap justify-center gap-4 lg:gap-7  xl:gap-12">
       {tabs.map((tab, index) => (
         <button
           key={index}

@@ -2,38 +2,14 @@
 import TextBox from "@/components/Controls/TextBox";
 import useAuth from "@/components/CustomHooks/useAuth";
 import MainHeading from "@/components/UI/MainHeading";
-import { FaDownload, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const EnquireNow = ({ projectsdata, id }: any) => {
-  const enquiryData = {
-    contactInfo: {
-      phone: {
-        label: "Call Us",
-        number:
-          projectsdata?.city?.toLowerCase() === "guwahati"
-            ? "9164-67-9164"
-            : "9057-64-4644",
-      },
-      email: {
-        label: "Email Us",
-        address: "info@roodraksh.co.in",
-      },
-    },
-    downloadButton: {
-      text: "Download Brochure",
-      url: "/brochure.pdf",
-    },
-  };
-
   const { EnquiryFormik, EnquiryFormaData } = useAuth({
     name: projectsdata?.title,
   });
   return (
-    <div
-      id={id}
-      className="w-full  bg-white px-5 pt-4 pb-6 shadow-xl rounded-md"
-    >
-      <div className="text-center mb-6">
+    <div id={id} className="w-full  bg-white px-6 py-5 shadow-xl rounded-md">
+      <div className="text-center mb-3">
         <MainHeading
           Title={"Enquire Now"}
           BlackColor={true}
@@ -68,59 +44,6 @@ const EnquireNow = ({ projectsdata, id }: any) => {
           </button>
         </div>
       </form>
-      <div className="mt-12 space-y-6">
-        <div className="flex items-center space-x-4">
-          <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <FaPhone className="text-primary text-sm" />
-          </div>
-          <div>
-            <p className="text-sm font-medium text-gray-700">
-              {enquiryData?.contactInfo?.phone?.label}
-            </p>
-            <a
-              href={`tel:${enquiryData?.contactInfo?.phone?.number.replace(
-                /-/g,
-                ""
-              )}`}
-              className="text-gray-600 hover:text-primary transition-colors duration-200"
-            >
-              {enquiryData?.contactInfo?.phone?.number}
-            </a>
-          </div>
-        </div>
-
-        {/* Email */}
-        <div className="flex items-center space-x-4">
-          <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <FaEnvelope className="text-primary text-sm" />
-          </div>
-          <div>
-            <p className="text-sm font-medium text-gray-700">
-              {enquiryData?.contactInfo?.email?.label}
-            </p>
-            <a
-              href={`mailto:${enquiryData?.contactInfo?.email?.address}`}
-              className="text-gray-600 hover:text-primary transition-colors duration-200"
-            >
-              {enquiryData?.contactInfo?.email?.address}
-            </a>
-          </div>
-        </div>
-
-        {/* Download Button */}
-        {projectsdata?.brochure_url && (
-          <div className="mt-8">
-            <a
-              download
-              href={`${projectsdata?.brochure_url}`}
-              className="w-full flex items-center justify-center space-x-2 bg-white border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-md transition-all duration-200 focus:outline-none  hover:-translate-y-2 cursor-pointer"
-            >
-              <FaDownload className="text-lg" />
-              <span>{enquiryData.downloadButton.text}</span>
-            </a>
-          </div>
-        )}
-      </div>
     </div>
   );
 };

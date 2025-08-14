@@ -320,7 +320,8 @@ export const projects = [
     ),
 
     location: {
-      address: "SATGAON MAIN ROAD , BESIDE SFS SCHOOL, GUWAHATI - 781170",
+      address:
+        "Satgaon Road, Beside SFS School, Patharquarry ,Narengi, Guwahati-781027",
       map_url:
         "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.856014913118!2d91.831759!3d26.166474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a592bf05573a1%3A0x7cd7fa416bd6b80c!2sRoodraksh%20Kundan%20-%202%20and%203%20BHK%20Flats%20and%20Apartments%20For%20Sale%20in%20Guwahati!5e0!3m2!1sen!2sin!4v1750316014703!5m2!1sen!2sin",
       satellite_view:
@@ -522,7 +523,7 @@ export const projects = [
     ),
 
     location: {
-      address: "NEW AIRPORT ROAD, GARAL, DHARAPUR-781017",
+      address: "New Garal Road Dharapur, Guwahati - 781017",
       map_url:
         "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7163.512341855469!2d91.608909!3d26.139492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a470027348fa3%3A0x308eb555a369d3d8!2sRoodraksh%20Sapphire!5e0!3m2!1sen!2sin!4v1750314789054!5m2!1sen!2sin",
       satellite_view:
@@ -671,16 +672,16 @@ export const projects = [
       total_spaces: "-",
       total_towers: "-",
       flat_sizes: "-",
-      bhk: "-",
+      bhk: "3 BHK ",
     },
     short_description:
       "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
     description:
       " introduces a new destination of comfort and ease in Guwahati. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
-    amenities: [],
+    amenities: amenities.filter((item) => [8].includes(item.id)),
     location: {
       address:
-        "BHASKAR NAGAR, R G B ROAD, BESIDE BHASKAR VIDYAPEETH SCHOOL -781003",
+        "Near Aunty’s Shop, Bhaskar Nagar, Near Bhaskar Vidyapith School, Zoo Road,Guwahati-781021",
       map_url:
         "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7161.108668829117!2d91.777224!3d26.17864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59210013721d%3A0xc8e892b61e95344f!2sRoodraksh%20Pride!5e0!3m2!1sen!2sin!4v1750329343927!5m2!1sen!2sin",
       satellite_view:
@@ -695,7 +696,16 @@ export const projects = [
         image: "/projects/roodraksh_pride02/Pride 3BHK.png",
       },
     ],
-    gallery: [],
+    gallery: [
+      {
+        title: "image01",
+        image: "/projects/roodraksh_pride02/feature.png",
+      },
+      {
+        title: "image02",
+        image: "/projects/roodraksh_pride02/banner.png",
+      },
+    ],
   },
   // {
   //   id: 4,
