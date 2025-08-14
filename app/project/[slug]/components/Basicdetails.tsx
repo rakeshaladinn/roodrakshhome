@@ -1,3 +1,4 @@
+import MainHeading from "@/components/UI/MainHeading";
 import React from "react";
 import { FaDownload, FaEnvelope, FaPhone } from "react-icons/fa6";
 
@@ -18,8 +19,17 @@ const Basicdetails = ({ projectsdata }: any) => {
     },
   };
   return (
-    <div className="bg-white p-6">
-      <div className="mt-12 space-y-6">
+    <div className="bg-white px-5 py-4 rounded-lg">
+      <div className="text-center mb-3">
+        <MainHeading
+          Title={"Connent us"}
+          BlackColor={true}
+          ClassNameTitle={
+            "text-center justify-center capitalize lg:text-2xl mb-2"
+          }
+        />
+      </div>
+      <div className=" space-y-6">
         <div className="flex items-center space-x-4">
           <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
             <FaPhone className="text-primary text-sm" />

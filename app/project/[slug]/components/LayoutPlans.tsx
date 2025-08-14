@@ -54,7 +54,7 @@ const LayoutPlans = ({ projectsdata, id }: any) => {
                 {item?.title}
               </h3>
               <p className="text-white text-sm mb-4">
-                {item?.subtitle || "Roodraksh Pearl"}
+                {projectsdata?.title || "Roodraksh Pearl"}
               </p>
               <div
                 onClick={(e) => openLightbox(index, e)}
