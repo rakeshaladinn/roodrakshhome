@@ -38,7 +38,7 @@ const bannerData = [
 
 const MainBanner = () => {
   return (
-    <div className="relative mx-3 top-24 rounded-3xl overflow-hidden ">
+    <div className="relative mx-3 top-20 md:top-24 rounded-3xl overflow-hidden ">
       <Slider
         breakpoints={{ sm: 1, lg: 1 }}
         autoplayDelay={5000}
