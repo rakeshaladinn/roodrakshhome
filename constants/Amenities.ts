@@ -86,5 +86,30 @@ export const amenities = [
     icon: "/amenities/steam_message_room.png",
     title: "Steam and Massage Room",
   },
-  { id: 24, icon: "/amenities/games_room.png", title: "Games Room" },
+  {
+    id: 24,
+    icon: "/amenities/DG for Common Area.svg",
+    title: "DG for Common Area",
+  },
+
+  { id: 25, icon: "/amenities/lift.svg", title: "lift" },
+
+  {
+    id: 26,
+    icon: "/amenities/overhead illumination.svg",
+    title: "overhead illumination",
+  },
+
+  {
+    id: 27,
+    icon: "/amenities/rain-water-harvesting.svg",
+    title: "rain-water-harvesting",
+  },
+
+  { id: 28, icon: "/amenities/street-light.svg", title: "street-light" },
+  {
+    id: 29,
+    icon: "/amenities/Video Door Phones.svg",
+    title: "Video Door Phones",
+  },
 ];

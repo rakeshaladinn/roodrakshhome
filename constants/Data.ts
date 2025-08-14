@@ -678,7 +678,9 @@ export const projects = [
       "Perfectly positioned, this project presents modern residences crafted for optimal space use, enhanced security, and eco-friendly living.",
     description:
       " introduces a new destination of comfort and ease in Guwahati. With beautifully landscaped gardens, leisure zones, and essential facilities, it creates a perfect balance of community and relaxation. Conveniently positioned for quick access to all city necessities, this project ensures everything you require is within easy reach.",
-    amenities: amenities.filter((item) => [8].includes(item.id)),
+    amenities: amenities.filter((item) =>
+      [8, 24, 25, 26, 27, 28, 29].includes(item.id)
+    ),
     location: {
       address:
         "Near Aunty’s Shop, Bhaskar Nagar, Near Bhaskar Vidyapith School, Zoo Road,Guwahati-781021",
