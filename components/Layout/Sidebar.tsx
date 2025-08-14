@@ -87,7 +87,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       }`}
     >
       <div className="flex justify-end h-full  w-full">
-        <div className="w-[70%] block md:hidden md:w-[50%] bg-white relative text-white ">
+        <div className="w-[80%] block md:hidden md:w-[50%] bg-white relative text-white ">
           <div className="relative z-10   flex-col h-full justify-between px-10 py-8">
             <div
               className="flex items-center gap-2 text-black md:text-white cursor-pointer hover:opacity-80 transition-opacity"
@@ -212,7 +212,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             className="w-fit object-contain h-16 mt-10"
           />
           <div
-            className="flex items-end absolute left-[96.5%] p-1 border-1 border-gray-500 rounded-full w-fit top-3  z-50  text-xl text-black justify-start  cursor-pointer hover:opacity-80 transition-opacity"
+            className="flex items-end absolute top-5 xl:top-3  left-[94%]  xl:left-[96.5%] p-1 border-1 border-gray-500 rounded-full w-fit  z-50  text-xl text-black justify-start  cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => setIsOpen(false)}
             role="button"
             tabIndex={0}
@@ -241,14 +241,14 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 </span>
               </h4>
               <div className="flex flex-col items-center space-y-2">
-                <div className="hidden lg:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors">
+                <div className="hidden md:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors">
                   <p className="text-lg font-medium">Guwahati:</p>
                   <p className="text-black/80 text-start">
                     Bhaskar Nagar, RGB ROAD Beside Bhaskar Vidyapeeth School
                     Guwahati - 781003
                   </p>
                 </div>
-                <div className="hidden lg:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors">
+                <div className="hidden md:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors">
                   <p className="text-lg font-medium">Agartala:</p>
                   <p className="text-black/80 text-start">
                     Dhaleswar, Near Prachya Bharati School North Side Shiv
@@ -267,7 +267,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               <div className="flex flex-col items-start  space-y-2">
                 <a
                   href="tel:+91-9164679164"
-                  className="hidden lg:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors"
+                  className="hidden md:flex items-center gap-2 text-black/80 cursor-pointer hover:text-black transition-colors"
                 >
                   <p className="text-lg font-medium">Guwahati:</p>
                   <FiPhoneCall size={20} />
@@ -277,7 +277,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                 </a>
                 <a
                   href="tel:+91-9057644644"
-                  className="hidden lg:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors"
+                  className="hidden md:flex items-center gap-2 cursor-pointer text-black/80 hover:text-black transition-colors"
                 >
                   <p className="text-lg font-medium">Agartala:</p>
                   <FiPhoneCall size={20} />

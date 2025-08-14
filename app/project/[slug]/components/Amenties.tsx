@@ -32,7 +32,7 @@ const Amenities = ({ projectsdata, id }: any) => {
               />
             </div>
             <div>
-              <h4 className="text-gray-900 font-normal  text-sm">
+              <h4 className="text-gray-900 capitalize font-normal  text-sm">
                 {item?.title}
               </h4>
             </div>

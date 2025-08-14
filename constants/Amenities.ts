@@ -92,11 +92,11 @@ export const amenities = [
     title: "DG for Common Area",
   },
 
-  { id: 25, icon: "/amenities/lift.svg", title: "lift" },
+  { id: 25, icon: "/amenities/lift.svg", title: "Lift" },
 
   {
     id: 26,
-    icon: "/amenities/overhead illumination.svg",
+    icon: "/amenities/Overhead illumination.svg",
     title: "overhead illumination",
   },
 

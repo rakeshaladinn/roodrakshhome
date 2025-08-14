@@ -74,7 +74,7 @@ const Header = () => {
               }`}
             />
           </Link>
-          <div className="hidden lg:flex items-center justify-evenly     lg:w-[65%] mx-auto ">
+          <div className="hidden md:flex items-center justify-evenly     md:w-[60%] mx-auto ">
             {navItems.map((item, index) => (
               <div key={index} className="relative flex">
                 <Link
@@ -156,7 +156,7 @@ const Header = () => {
             ))}
           </div>
 
-          <div className=" flex items-center justify-end  gap-8 h-full w-full md:w-[42%] lg:w-[18%] ">
+          <div className=" flex items-center justify-end  gap-8 h-full w-full md:w-[25%] lg:w-[18%] ">
             <Button
               text="Connect us"
               onClick={() => setisModal(true)}
