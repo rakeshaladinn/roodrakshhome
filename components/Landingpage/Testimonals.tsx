@@ -72,7 +72,7 @@ const Testimonials = () => {
               {TestimonialData.map((item, index) => (
                 <div
                   key={index}
-                  className=" border border-primary mx-2 rounded-xl  h-76 2xl:h-64  p-3 shadow-md relative "
+                  className=" border border-primary mx-2 rounded-xl  h-80 sm:h-76 2xl:h-64  p-3 shadow-md relative "
                 >
                   <div className="flex justify-center text-yellow-400 text-xl mb-3">
                     {[...Array(5)].map((_, i) => (
@@ -107,7 +107,7 @@ const Testimonials = () => {
                         alt={`user-${idx}`}
                         width={1920}
                         height={1080}
-                        className="rounded-full object-cover h-20 w-20  border-2 border-white shadow-md"
+                        className="rounded-full object-cover h-16 w-16 sm:h-20 sm:w-20  border-2 border-white shadow-md"
                       />
                     ))}
                   </div>
